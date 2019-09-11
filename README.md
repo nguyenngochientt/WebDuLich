@@ -1,12 +1,11 @@
 # WebSiteBanTuiSach_SuDungMaNguonMo_PhP
 Xây dựng website bán túi sách sử dụng mã nguồn mở PHP, MySQL
 Chức năng:
-Client
+
 - Đặt hàng
 - Hủy đơn hàng
 - Đăng nhập với facebook, gmail
 - Thanh toán 
-Sever:
 - Đăng nhập tài khoản admin
 - Quản lí tài khoản admin
 - Quản lí tài khoản khách hàng
