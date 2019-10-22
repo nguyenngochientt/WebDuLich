@@ -1,16 +1,9 @@
-
-
-Xây dựng website bán túi sách sử dụng mã nguồn mở PHP, MySQL
+Xây dựng web site đặt tour du lịch
 Chức năng:
 
-- Đặt hàng
-- Hủy đơn hàng
-- Đăng nhập với facebook, gmail
-- Thanh toán 
-- Đăng nhập tài khoản admin
-- Quản lí tài khoản admin
-- Quản lí tài khoản khách hàng
-- Quản lí các bài viết, loại bài viết
-- Quản lí các đơn hàng
-- Quản lí sản phẩm, danh mục sản phẩm
-- Quản lí đánh giá bình luận 
+- Tìm kiếm
+- Hiển thị tour mới nhât, tour mới cập nhật
+- Tích hợp quản lí bài viết
+- Thanh toán
+- Các tour đang được giảm giá
+- Các tour dịp lễ
