@@ -1,0 +1,297 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .search-box {
+    width: 45%;
+    height: 50%;
+  }
+  .search-box .form-control {
+    height: 28px;
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .text_detail_choose_city {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .glyphicon-triangle-bottom {
+    font-size: 78%;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .fa-city {
+    font-size: 90%;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrap_choose_city {
+    padding-bottom: 6%;
+    padding-top: 7%;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .top_header > ul > li {
+    float: left;
+    margin-left: 3%;
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .image_tours {
+    width: 29%;
+    margin-left: 10%;
+    font-size: 41%;
+  }
+  .image_tours a {
+    font-size: 7px;
+    padding: 5px;
+    color: #000;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .image_tours {
+    width: 100%;
+    margin-left: 10%;
+    font-size: 41%;
+  }
+  .image_tours a {
+    font-size: 7px;
+    padding: 5px;
+    color: #000;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .image_tours_text_price {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .hot_tour_media_ {
+    margin-top: 4%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .text_background_ {
+    margin-top: -204px;
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .panner_body_ {
+    margin-top: -53px;
+    text-align: center;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .text_mail {
+    width: 57%;
+    font-size: 60%;
+    height: 22px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .btn_submit_mail {
+    font-size: 60%;
+    height: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .nhapmail_footer {
+    padding-bottom: 27px;
+    margin-top: -132px;
+  }
+  .nhapmail_footer h3 {
+    padding-bottom: 0px;
+    padding-top: 18px;
+    font-size: 80%;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .nhapmail_footer {
+    padding-bottom: 27px;
+    margin-top: -132px;
+  }
+  .nhapmail_footer h3 {
+    padding-bottom: 0px;
+    padding-top: 18px;
+    font-size: 80%;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .grid_4_ {
+    margin-top: 5%;
+    width: 27%;
+    float: left;
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 780px) {
+  .grid_4_ {
+    margin-top: 5%;
+    width: 27%;
+    float: left;
+    margin-left: 18px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .name_tour_tt {
+    font-size: 79%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .price {
+    font-size: 79%;
+  }
+  .price span {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .banner a {
+    font-size: 7px;
+    line-height: 2px;
+    margin-top: 3%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .tours_ {
+    float: left;
+    width: 33%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .g_content_tour:first-child {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .g_content_tour h5 {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .panner_main1 {
+    width: 30%;
+    float: left;
+    padding: 0px;
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .glyphicon-triangle-top:before {
+    font-size: 32%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .bg_panner_footer {
+    margin-top: -13%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .glyphicon-triangle-top {
+    height: 0px;
+    padding-top: 0px;
+    margin-top: -84px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .top_triangle {
+    margin-top: 12%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .left_footer_left {
+    font-size: 57%;
+    padding: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .support2_ {
+    font-size: 57%;
+    padding: 0px;
+  }
+  .support2_ ul li span {
+    font-size: 330%;
+  }
+  .support2_ h5 {
+    font-size: 184%;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.fa-facebook-square {
+  font-size: 48px;
+  margin-top: -17px;
+  color: red;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .fa-facebook-square {
+    font-size: 300%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .footer_ {
+    margin-top: -42px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .change_footer_2 {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .lienhe_ {
+    font-size: 80%;
+    width: 33%;
+  }
+  .lienhe_ h4 {
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

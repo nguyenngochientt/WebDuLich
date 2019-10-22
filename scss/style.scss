@@ -1,0 +1,349 @@
+
+// //////////////////////
+.search-box{
+	@media (min-width: 320px) and (max-width: 480px) {
+		width: 45%; 
+		height: 50%;
+		.form-control{
+			height: 28px;
+			font-size: 80%;
+		}
+		
+	  }
+}
+.text_detail_choose_city{
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 80%;
+	}
+}
+.glyphicon-triangle-bottom{
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 78%;
+    	margin-top: 2%;
+	}
+	
+}
+//hello push 
+.fa-city{
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 90%;
+		margin-top: 2%;
+	}
+	
+}
+.wrap_choose_city{
+	@media (min-width: 320px) and (max-width: 480px) {
+		padding-bottom: 6%;
+		padding-top: 7%;
+		padding: 8px;
+	}
+}
+.top_header >ul> li{
+	@media (min-width: 320px) and (max-width: 480px) {
+		float: left;
+		margin-left: 3%;
+		font-size: 80%;
+	}
+}
+
+.image_tours{
+	@media (min-width: 320px) and (max-width: 480px) {
+		width: 29%;
+		margin-left: 10%;
+		font-size: 41%;
+		a{
+			font-size: 7px;
+			padding: 5px;
+			color: #000;
+			padding-left: 13px;
+			padding-right: 13px;
+		}
+	}
+}
+
+.image_tours{
+	@media (min-width: 768px) and (max-width: 768px) {
+		width: 100%;
+		margin-left: 10%;
+		font-size: 41%;
+		a{
+			font-size: 7px;
+			padding: 5px;
+			color: #000;
+			padding-left: 13px;
+			padding-right: 13px;
+		}
+	}
+}
+.image_tours_text_price {
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-bottom: 0px;
+	}
+}
+.hot_tour_media_{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: 4%;
+	}
+}
+.text_background_{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: -204px;
+		font-size: 36px;
+	}
+	
+}
+.panner_body_{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: -53px;
+		text-align: center;
+		margin-left: 16px;
+	}
+}
+.text_mail {
+	@media (min-width: 320px) and (max-width: 768px){
+		width: 57%;
+		font-size: 60%;
+
+		height: 22px;
+	}
+}
+.btn_submit_mail{
+	@media (min-width: 320px) and (max-width: 768px){
+		font-size: 60%;
+
+		height: 25px;
+	}
+
+}
+.nhapmail_footer{
+	@media (min-width: 320px) and (max-width: 768px){
+
+		padding-bottom: 27px;
+   		margin-top: -132px;
+		h3{
+			padding-bottom: 0px;
+		padding-top: 18px;
+		font-size: 80%;
+		margin-bottom: 0px;
+		}
+	}
+
+}
+.nhapmail_footer{
+	@media (min-width: 768px) and (max-width: 768px){
+
+		padding-bottom: 27px;
+   		margin-top: -132px;
+		h3{
+			padding-bottom: 0px;
+		padding-top: 18px;
+		font-size: 80%;
+		margin-bottom: 0px;
+		}
+	}
+
+}
+.grid_4_{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: 5%;
+		width: 27%;
+		float: left;
+		margin-left: 12px;
+		}
+	
+}
+.grid_4_{
+	@media (min-width: 780px) and (max-width: 780px){
+		margin-top: 5%;
+		width: 27%;
+		float: left;
+		margin-left: 18px;
+		}
+	
+}
+.name_tour_tt {
+	@media (min-width: 320px) and (max-width: 480px){
+		font-size: 79%;
+	}
+	
+}
+.price{
+	@media (min-width: 320px) and (max-width: 480px){
+		span{
+			font-size: 9px;
+			margin-top: 5px
+		}
+		font-size: 79%;
+	}
+	
+}
+.banner {
+	@media (min-width: 320px) and (max-width: 480px){
+		a{
+			font-size: 7px;
+			line-height: 2px;
+			margin-top: 3%;
+		}
+	
+	}
+}
+.tours_{
+	@media (min-width: 320px) and (max-width: 480px){
+		float: left;
+		width: 33%;
+	}
+}
+.g_content_tour:first-child{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-left: 0px;
+	}
+  
+}
+.g_content_tour h5{
+	@media (min-width: 320px) and (max-width: 480px){
+		font-size: 70%;
+	}
+  
+}
+.panner_main1 {
+	@media (min-width: 320px) and (max-width: 480px){
+		width: 30%;
+		float: left;
+		padding: 0px;
+		margin-left: 8px;
+	}
+   
+}
+.glyphicon-triangle-top:before {
+	@media (min-width: 320px) and (max-width: 480px){
+		font-size: 32%;
+	}
+
+	
+}
+.bg_panner_footer {
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: -13%;
+	}
+} 
+.glyphicon-triangle-top{
+	@media (min-width: 320px) and (max-width: 480px){
+		height: 0px;
+		padding-top: 0px;
+	
+		margin-top: -84px;
+	}
+} 
+.top_triangle{
+	@media (min-width: 320px) and (max-width: 480px){
+		margin-top: 12%;
+	}
+
+}
+.left_footer_left {
+	@media (min-width: 320px) and (max-width:  1024px){
+		font-size: 57%;
+		padding: 0px;
+	}
+	
+}
+.support2_{
+	@media (min-width: 320px) and (max-width: 1024px){
+		font-size: 57%;
+		padding: 0px;
+		ul li span{
+			font-size: 330%;
+		}
+		 h5{
+			font-size: 184%;
+			padding: 0px;
+			margin-bottom: 0px;
+		}
+	}
+}
+.fa-facebook-square{
+	font-size:48px;
+    margin-top: -17px;color:red;
+	@media (min-width: 320px) and (max-width:  1024px){
+		font-size: 300%;
+	}
+}
+.footer_{
+	@media (min-width: 320px) and (max-width:  1024px){
+		margin-top: -42px;
+	}
+}
+.change_footer_2{
+	@media (min-width: 320px) and (max-width:  1024px){
+		margin-top: 40px;
+	}
+}
+.lienhe_{
+	@media (min-width: 320px) and (max-width:  480px){
+		font-size: 80%;
+		width: 33%;
+		h4{
+			font-size: 11px;
+		}
+	}
+
+}
+// 	@media (max-width: $mobile-breakpoint) {
+//         width: 50%; 
+// 	}
+// 	@media (max-width: $tablet-breakpoint) {
+//       width: 33.33%;
+//       margin-left: -100px;
+// 	}
+// }
+// .text_detail_choose_city{
+// 	width: 100%;
+// 	@media (min-width: $mobile-breakpoint) {
+//        font-size: 10px;
+// 	}
+// 	@media (min-width: $tablet-breakpoint) {
+// 		font-size: 20px;
+
+// 	}
+// }
+// .wrap_choose_city{
+// 	width: 100%;
+// 	@media (min-width: $mobile-breakpoint) {
+//        padding: 5px;
+// 	}
+// 	@media (min-width: $tablet-breakpoint) {
+// 		padding: 10px;
+
+// 	}
+// }
+// .fa-city{
+// 	@media (min-width: $mobile-breakpoint) {
+// 		font-size: 20px;
+// 	 }
+// 	 @media (min-width: $tablet-breakpoint) {
+// 		font-size: 20px;
+// 	 }
+// }
+// .search-form{
+// 	@media (min-width: $mobile-breakpoint) {
+// 		height: 20px;;
+// 	 }
+// 	 @media (min-width: $tablet-breakpoint) {
+// 		font-size: 30px;
+// 	 }
+// }
+// .top_header{
+// 	@media (min-width: $mobile-breakpoint) {
+		
+// 		ul li{
+// 			margin-left: 9px;
+// 		}
+		
+// 	 }
+// 	 @media (min-width: $tablet-breakpoint) {
+// 		ul li{
+// 			margin-left: 9px;
+// 		}
+		
+// 	 }
+// }
