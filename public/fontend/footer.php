@@ -15,6 +15,7 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+    
     <div class="row ">
         <div class="col-sm-6">
         <div class="left_footer_left">

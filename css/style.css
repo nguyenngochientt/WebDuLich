@@ -2,6 +2,36 @@
 @import "skeleton.css";
 @import "font-awesome.css";
 @import "superfish.css";
+.header-menu{
+    z-index: 999;
+    position: relative;
+    
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto;
+   
+}
+.header-menu  ul li a{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+.nav-item{
+    float: right;
+}
+.bg_drop{
+    display: none;
+}
+.bg_drop{
+    background-color: #cc0000;
+    margin-top: 8%;
+    button{
+        color: #fff;
+        text-transform: uppercase;
+    }
+    button:hover{
+        color: #000;
+    }
+}
 .ul_tag{
     display: none;
     background: linear-gradient(100deg,rgba(202, 83, 3, 0.993),rgb(248, 138, 65));
@@ -556,7 +586,7 @@ color:rgb(255, 0, 0);font-weight: bold;font-size:20px;
     -webkit-box-orient: vertical;
 }
 .top_header{
-    background: linear-gradient(100deg,rgb(17, 1, 39),rgb(180, 167, 236),rgb(26, 1, 59));
+    background: rgb(216, 212, 212);
    
 }
 .top_header ul{
