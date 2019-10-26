@@ -6,8 +6,8 @@ Chức năng:
 - Thanh toán
 - Các tour đang được giảm giá
 - Các tour dịp lễ
-Các trang:
--Trang chủ
--Bài viết
--Tous
--Liên hệ
+- Các trang:
+- Trang chủ
+- Bài viết
+- Tous
+- Liên hệ
