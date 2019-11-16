@@ -8,7 +8,6 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -23,9 +22,17 @@
                                 Danh mục
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Trong nước</a>
-                                <a class="dropdown-item" href="#">Ngoài nước</a>
-
+                                <?php
+                                     
+                                    $select="select name_category from category";
+                                    $result=mysqli_query( $connectDB->conn, $select);
+                                    if(mysqli_num_rows($result)>0){
+                                        while($row=mysqli_fetch_assoc($result)){
+                                            echo '<a class="dropdown-item" href="#">'.$row["name_category"].'</a>';
+                                        }
+                                    }
+                                ?>
+                              
                             </div>
                         </li>
 

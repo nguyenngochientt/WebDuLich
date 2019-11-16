@@ -27,7 +27,7 @@
     <?php include_once __DIR__."/commont_layout/topbar.html" ?>
     <!--end topbar -->
     <!-- menu -->
-    <?php include_once __DIR__."/commont_layout/menu.html" ?>
+    <?php include_once __DIR__."/commont_layout/menu.php" ?>
     <!-- end menu -->
     <!-- slider -->
     <?php include_once __DIR__."/commont_layout/slider.html" ?>
