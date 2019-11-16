@@ -1,0 +1,53 @@
+<div class="clear"></div>
+<div class="container space-withtour_header-banner">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="menu1 xt-ct-menu">
+                <div class="xtlab-ctmenu-item">Chọn khu vực</div>
+                <div class="xtlab-ctmenu-sub">
+                    <a href="#">Miền Bắc</a>
+                    <a href="#">Miền Trung</a>
+                    <a href="#">Miền Nam</a>
+                </div>
+            </div>
+            <script>
+                jQuery.fn.extend({
+                    setMenu: function () {
+                        return this.each(function () {
+                            var containermenu = $(this);
+                            var itemmenu = containermenu.find('.xtlab-ctmenu-item');
+                            itemmenu.click(function () {
+                                var submenuitem = containermenu.find('.xtlab-ctmenu-sub');
+                                submenuitem.slideToggle(200);
+                            });
+                            $(document).click(function (e) {
+                                if (!containermenu.is(e.target) &&
+                                    containermenu.has(e.target).length === 0) {
+                                    var isopened =
+                                        containermenu.find('.xtlab-ctmenu-sub').css("display");
+
+                                    if (isopened == 'block') {
+                                        containermenu.find('.xtlab-ctmenu-sub').slideToggle(100);
+                                    }
+                                }
+                            });
+                        });
+                    },
+
+                });
+
+
+                $('.xt-ct-menu').setMenu();
+            </script>
+        </div>
+        <div class="col-sm-10">
+            <form class="form-inline my-2 my-lg-0 seach">
+                <input class="form-control mr-sm-2" type="search" placeholder="Tên chuyến đi" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nơi khởi hành" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Điểm dừng chân" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Tìm kiếm</button>
+            </form>
+
+        </div>
+    </div>
+</div>
