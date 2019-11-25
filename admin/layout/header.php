@@ -53,7 +53,7 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="layout/production/images/user.jpg" alt="..." class="img-circle profile_img">
+                            <img src="layout/production/images/user.png " alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome</span>
@@ -70,8 +70,8 @@
                             <ul class="nav side-menu">
                                 <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="index.html">Thông tin doanh nghiệp</a></li>
-                                        <li><a href="index.html">Tài khoản quản trị</a></li>
+                                        <li><a href="company.php">Thông tin doanh nghiệp</a></li>
+                                        <li><a href="acount_admin.php">Tài khoản quản trị</a></li>
                                         <li><a href="index2.html">Log out</a></li>
                                     </ul>
                                 </li>
@@ -88,7 +88,7 @@
                                     <a><i class="glyphicon glyphicon-certificate" style="margin-right: 12px;"></i> Hướng
                                         dẫn viên <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="index.html">Xem tất cả</a></li>
+                                        <li><a href="tour_guider.php">Xem tất cả</a></li>
                                         <li><a href="add_tour_guider.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
@@ -148,7 +148,7 @@
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
                                     id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/img.jpg" alt="">John Doe
+                                    <img src="images/img.jpg" alt="">Admin
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
