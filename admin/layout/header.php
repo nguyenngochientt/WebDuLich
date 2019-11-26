@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Gentelella Alela! | </title>
+    <title>Travel Book | </title>
 
     <!-- Bootstrap -->
     <link href="layout/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
