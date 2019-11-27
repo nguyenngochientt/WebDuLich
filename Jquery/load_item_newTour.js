@@ -6,6 +6,11 @@ $(document).ready(function(){
             url="commont_layout/item_newTour.php",
         ).done(function(responsive){
             $(".item").html(responsive);
+            $(".btn_booking").each(function(){
+                $(this).click(function(){
+                   window.location.href="booktour.php";
+                })
+            })
         })
     }
     // $.getJSON("tours.json",function(tours){
