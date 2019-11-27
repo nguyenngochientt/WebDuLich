@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="box-upload">
-		<h3>Chọn hình ảnh</h3>
+		<h2>Upload hình ảnh</h2>
 		<form action="upload.php" method="POST" enctype="multipart/form-data" id="formUpload" onsubmit="return false;">
 			<div class="progress">
 				<div class="progress-bar">0%</div>
@@ -19,8 +19,8 @@
 			<div class="output"></div>
 		</form>
 	</div>
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.form.js"></script>
-	<script src="js/main.js"></script>
+	<script src="admin/js/jquery.js"></script>
+	<script src="admin/js/jquery.form.js"></script>
+	<script src="admin/js/main.js"></script>
 </body>
 </html>

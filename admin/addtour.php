@@ -108,7 +108,7 @@
 
                                 </form>
                             </form>
-                            <?php include __DIR__."/ul.php" ?>
+                            <?php include __DIR__."/index_up.php" ?>
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9  offset-md-3">
                                     <button type="button" class="btn btn-primary">Cancel</button>
