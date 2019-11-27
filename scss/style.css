@@ -693,4 +693,35 @@ body {
   }
 }
 
+.image img {
+  height: 300px;
+}
+
+.column_booking {
+  height: 300px;
+}
+.column_booking .booking_now {
+  margin-left: 40px;
+  float: right;
+  color: #fff;
+  background: linear-gradient(100deg, #940000, red, #990000);
+  padding: 5px;
+}
+.column_booking li {
+  color: #007777;
+}
+.column_booking li span {
+  color: #c08435;
+  float: right;
+}
+
+.nav_tab {
+  margin-top: 30px;
+}
+
+.content_tablist {
+  background: #ffff;
+  margin: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */

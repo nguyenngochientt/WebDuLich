@@ -711,3 +711,40 @@ body{
         }
       }
 }
+// booking
+// image
+.image{
+    img{
+       
+        height: 300px;
+    }
+}
+.column_booking{
+    height: 300px;
+    .booking_now{
+        margin-left: 40px;
+        float: right;
+        color: #fff;
+        background: linear-gradient(100deg, #940000, red, #990000);
+        padding: 5px;
+        
+    }
+    li{
+        color: #007777;
+        span{
+            color: #c08435;
+            float:right;
+        }
+        
+    }
+}
+// tab list
+.nav_tab{
+    
+    margin-top:30px ;
+   
+}
+.content_tablist{
+    background: #ffff;
+    margin: 0px;
+}
