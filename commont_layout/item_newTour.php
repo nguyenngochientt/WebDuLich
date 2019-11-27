@@ -6,7 +6,7 @@
         <p>Điêm dừng chân: Đà Lạt</p>
         <p>Thời khởi hành: 20/11/2019</p>
         <p>Kéo dài:7 ngày</p>
-        <button>Xem ngay</button>
+        <button class="btn_booking">Xem ngay</button>
     </div>
 
 </div>
