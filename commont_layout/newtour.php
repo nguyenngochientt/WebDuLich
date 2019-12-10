@@ -1,5 +1,5 @@
 <div class="container">
-    <?php echo '<h3 class="h3_">Tours nổi bật</h3>';?>
+    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours mới</h3>';?>
     <div class="row">
         <?php 
             for($i=0;$i<8;$i++){

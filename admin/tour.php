@@ -46,41 +46,25 @@
                                         <th>Giá vé trẻ em</th>
                                     </tr>
                                 </thead>
-
-
-                                <tbody>
-                                    <tr>
-                                        <td>Jonas Alexander</td>
-                                        <td>Developer</td>
-                                        <td>San Francisco</td>
-                                        <td>30</td>
-                                        <td>2010/07/14</td>
-                                        <td>$86,500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Shad Decker</td>
-                                        <td>Regional Director</td>
-                                        <td>Edinburgh</td>
-                                        <td>51</td>
-                                        <td>2008/11/13</td>
-                                        <td>$183,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Michael Bruce</td>
-                                        <td>Javascript Developer</td>
-                                        <td>Singapore</td>
-                                        <td>29</td>
-                                        <td>2011/06/27</td>
-                                        <td>$183,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Donna Snider</td>
-                                        <td>Customer Support</td>
-                                        <td>New York</td>
-                                        <td>27</td>
-                                        <td>2011/01/25</td>
-                                        <td>$112,000</td>
-                                    </tr>
+                                <tbody> 
+                                <?php
+                                     $select="select * from tour";
+                                     $result=mysqli_query( $connectDB->conn, $select);
+                                     if(mysqli_num_rows($result)>0){
+                                         while($row=mysqli_fetch_assoc($result)){
+                                             echo '
+                                             <tr>
+                                                <td>'.$row["id_tour"].'</td>'.
+                                                '<td>'.$row["name_tour"].'</td>'.
+                                                '<td>'.$row["place_start"].'</td>'.
+                                                '<td>'.$row["date_go"].'</td>'.
+                                                '<td>'.$row["price_adult"]." Đồng".'</td>'.
+                                                '<td>'.$row["price_child"]." Đồng".'</td>'.
+                                            '</tr>'
+                                             ;
+                                         }
+                                     }
+                                 ?>
                                 </tbody>
                             </table>
                         </div>

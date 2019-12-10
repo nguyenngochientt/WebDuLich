@@ -36,6 +36,12 @@
     <link href="layout/build/css/custom.min.css" rel="stylesheet">
     <!-- Dropzone.js -->
     <link href="layout/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <?php 
+        include '..\model\connectDB.php';
+        use model\connectDB;
+        $connectDB=new connectDB("tctdlich");
+        $connectDB->connect();
+    ?>
 </head>
 
 <body class="nav-md">

@@ -1,4 +1,5 @@
 <?php include_once __DIR__."/layout/header.php" ?>
+
 <!-- page content -->
 <div class="row">
     <div class="col-sm-12">
