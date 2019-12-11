@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -21,7 +20,6 @@
         $connectDB->connect();
     ?>
 </head>
-
 <body>
     <!-- top bar -->
     <?php include_once __DIR__."/commont_layout/topbar.html" ?>
@@ -49,26 +47,53 @@
                     <div>
                         <img src="assets/images/iloveimg-resized/hoian.jpg">
                     </div>
-
+                    <div class="#" style="margin-top:70px">
+                        <div style="float:left" class="col-sm-6">
+                            <div><img src="assets/images/iloveimg-resized/hoian2.jpg" style="width:100%; height:45%"></div>
+                        </div>
+                        <div  style="float:left" class="col-sm-6">
+                            <div><img src="assets/images/iloveimg-resized/hoian2.jpg" style="width:100%; height:45%"></div>
+                        </div>  
+                    </div>
                 </div>
                 <div class="col-sm-6 ">
                     <div class="title">
                         <p>Tour du lịch</p>
                     </div>
-                    <ul class="list-group column_booking">
-                        <li class="list-group-item">Tên tour: <span>Du lịch Hội An</span></li>
-                        <li class="list-group-item">Thời gian khởi hành: <span>1/11/2019</span></li>
-                        <li class="list-group-item">Nơi khởi hành: <span>Đà Nẵng</span></li>
-                        <li class="list-group-item">Điểm dừng chân: <span>Hội An</span></li>
-                        <li class="list-group-item">Thời gian: <span>10 ngày</span></li>
-                        <li class="list-group-item">
-                            Giá: 1.500.000
-                            <span class="booking_now">Đặt vé ngay</span>
-                        </li>
-                    </ul>
+                    <?php
+                    if(isset($_GET['id'])){
+                        $id=$_GET['id'];
+                        $select="SELECT tour.*,category.*,tour_guider.*,region.*
+                        from 	tour, category, tour_guider,region
+                        WHERE tour.id_category=category.id_category AND
+                        tour.tour_guide_id=tour_guider.id_guider and region.id_region=tour.id_region
+                        and id_tour=".$id;
+                        $result=mysqli_query( $connectDB->conn, $select);
+                        if(mysqli_num_rows($result)>0){
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo '
+                                    <ul class="list-group column_booking">'.
+                                    '<li class="list-group-item">Tên tour: <span>'.$row["name_tour"].'</span></li>'.
+                                    '<li class="list-group-item">Thời gian khởi hành: <span>'.$row["date_go"].'</span></li>'.
+                                    '<li class="list-group-item">Nơi khởi hành: <span>'.$row["place_start"].'</span></li>'.
+                                    '<li class="list-group-item">Điểm dừng chân: <span>'.$row["place_des"].'</span></li>'.
+                                    '<li class="list-group-item">Thời gian về: <span>'.$row["date_back"].'</span></li>'.
+                                    '<li class="list-group-item">'.
+                                        '<p>'."Số vé người lớn: <span>".$row["num_adults"].'</span></p>'.
+                                        '<p>'."Giá vé người lớn: <span>".$row["price_adult"].'</span></p>'.
+                                        '<p>'."Số vé trẻ em: <span>".$row["num_child"].'</span></p>'.
+                                        '<p>'."Giá vé trẻ em: <span>".$row["price_child"].'</span></p>'.
+                                        '<span class="booking_now">Đặt vé ngay</span>'.
+                                    '</li>'.
+                                '</ul>';
+                                ;
+                            }
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-            <div class="row nav_tab">
+            <div class="row nav_tab" style="margin-top: 312px;">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="tab-bootstrap" data-toggle="tab" href="#lotrinhchuyendi"
@@ -234,13 +259,13 @@
                         <hr>
                     </div>
                     <div class="tab-pane fade" id="chitietchuyendi" role="tabpanel" aria-labelledby="tab-css">
-                        CSS stands for Cascading Style Sheets. ...
+                       
                     </div>
                     <div class="tab-pane fade " id="cacdichvudikem" role="tabpanel" aria-labelledby="tab-bootstrap">
-                        Bootstrap is a free front-end framework for faster and easier web development...
+                       
                     </div>
                     <div class="tab-pane fade " id="thongtin" role="tabpanel" aria-labelledby="tab-bootstrap">
-                        Bootstrap is a free front-end framework for faster and easier web development...
+                       
                     </div>
                 </div>
             </div>

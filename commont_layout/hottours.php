@@ -1,8 +1,8 @@
-<div class="container">
-    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours mới</h3>';?>
+<div class="container hottour-wrap">
+    <h3 class="h3_">Tours nổi bật</h3>
     <div class="row">
-        <?php 
-            $select="select * from tour";
+            <?php 
+            $select="select * from tour LIMIT 0, 4";
             $result=mysqli_query( $connectDB->conn, $select);
             if(mysqli_num_rows($result)>0){
                 while($row=mysqli_fetch_assoc($result)){

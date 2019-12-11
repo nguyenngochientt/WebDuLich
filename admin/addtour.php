@@ -15,20 +15,19 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="x_content">
-                            <form method="get" action="">
-
+                            <form method="post"  action="admin/function/tour.php">
                                 <form class="form-horizontal form-label-left">
 
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Tên tour du lịch</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Tour du lịch...">
+                                            <input type="text" class="form-control" name="name_tour" placeholder="Tour du lịch...">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3 col-sm-3 ">Hướng dẫn viên</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <select class="form-control">
+                                            <select class="form-control" name="guider">
                                                 <option>Choose option</option>
                                                 <option>Option one</option>
                                                 <option>Option two</option>
@@ -40,7 +39,7 @@
                                     <div class="form-group row">
                                         <label class="control-label col-md-3 col-sm-3 ">Vùng niềm</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <select class="form-control">
+                                            <select class="form-control" name="region">
                                                 <option>Choose option</option>
                                                 <option>Option one</option>
                                                 <option>Option two</option>
@@ -52,38 +51,38 @@
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Nơi khởi hành</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Nơi khởi hành...">
+                                            <input type="text" class="form-control" name="place_start" placeholder="Nơi khởi hành...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Điểm dừng chân</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Điểm dừng chân...">
+                                            <input type="text" class="form-control" name="place_des" placeholder="Điểm dừng chân...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Thời gian khởi hành</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="date_start"
                                                 placeholder="Thời gian khởi hành...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Thời gian kết thúc</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Thời gian kết thúc...">
+                                            <input type="text" class="form-control" name="date_back" placeholder="Thời gian kết thúc...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Giá vé người lớn</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Giá vé người lớn...">
+                                            <input type="text" class="form-control" name="price_adutls" placeholder="Giá vé người lớn...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Số vé trẻ em còn trống</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="price_child"
                                                 placeholder="Số vé trẻ em còn trống...">
                                         </div>
                                     </div>
@@ -91,21 +90,19 @@
                                         <label class="control-label col-md-3 col-sm-3 ">Số vé người lớn còn
                                             trống</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="num_adult"
                                                 placeholder="Số vé người lớn còn trống...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Giá vé trẻ em</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Giá vé trẻ em...">
+                                            <input type="text" class="form-control"  name="price_child" placeholder="Giá vé trẻ em...">
                                         </div>
                                     </div>
                                     <!-- up load -->
 
                                     <!-- end up load -->
-
-
                                 </form>
                             </form>
                             <?php include __DIR__."/index_up.php" ?>

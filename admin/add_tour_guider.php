@@ -14,7 +14,7 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="x_content">
-                            <form method="get" action="">
+                            <form method="get">
                                 <form class="form-horizontal form-label-left">
 
                                     <div class="form-group row ">

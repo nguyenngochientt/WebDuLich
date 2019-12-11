@@ -14,7 +14,10 @@
                             <a class="nav-link" href="index.php">Trang chủ <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Giới thiệu</a>
+                            <a class="nav-link" href="gioithieu.php">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bài viết</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -22,16 +25,19 @@
                                 Danh mục
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php
+                                <a class="dropdown-item" href="tourtrongnuoc.php">Tour trong nước</a>
+                                <a class="dropdown-item" href="#">Tour ngoài nước</a>
+                                <a class="dropdown-item" href="#">Ngày lễ nước</a>
+                                <!-- <?php
                                      
                                     $select="select name_category from category";
                                     $result=mysqli_query( $connectDB->conn, $select);
                                     if(mysqli_num_rows($result)>0){
                                         while($row=mysqli_fetch_assoc($result)){
-                                            echo '<a class="dropdown-item" href="#">'.$row["name_category"].'</a>';
+                                            echo '<a class="dropdown-item" href="tourtrongnuoc.php?id='.$row["id_category"].'">'.$row["name_category"].'</a>';
                                         }
                                     }
-                                ?>
+                                ?> -->
                               
                             </div>
                         </li>

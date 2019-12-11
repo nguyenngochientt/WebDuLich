@@ -8,5 +8,4 @@
         <p>Kéo dài:7 ngày</p>
         <button class="btn_booking">Xem ngay</button>
     </div>
-
 </div>
