@@ -58,7 +58,11 @@
                                                 '<td>'.$row["name_tour"].'</td>'.
                                                 '<td>'.$row["place_start"].'</td>'.
                                                 '<td>'.$row["date_go"].'</td>'.
-                                                '<td>'.'<a href="detail_tour.php?detail=detail&id="'.$row["id_tour"].'>'."Xem chi tiết".'</a></td>'.
+                                                '<td>'.
+                                                    '<a href="detail_tour.php?id='.
+                                                        $row["id_tour"].'"'.
+                                                        '>Xem chi tiết'.
+                                                    '</a></td>'.
                                             '</tr>'
                                              ;
                                          }

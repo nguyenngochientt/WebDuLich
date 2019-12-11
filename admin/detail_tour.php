@@ -27,7 +27,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Bảng điều khiển <small>Tours</small></h2>
+                            <h2>Bảng điều khiển </h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -35,7 +35,44 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                           <h4>Chi tiết tour du lịch
+                         
+                           <?php
+                                if(isset($_GET['id'])){
+                                    $id=$_GET['id'];
+                                    $select="SELECT tour.*,category.*,tour_guider.*,region.*
+                                    from 	tour, category, tour_guider,region
+                                    WHERE tour.id_category=category.id_category AND
+                                    tour.tour_guide_id=tour_guider.id_guider and region.id_region=tour.id_region
+                                    and id_tour=".$id;
+                                    $result=mysqli_query( $connectDB->conn, $select);
+                                    if(mysqli_num_rows($result)>0){
+                                        while($row=mysqli_fetch_assoc($result)){
+                                            echo '
+                                            <div class=row>
+                                                <div class="col-sm-6">'.
+                                                    '<p>'.'Mã tour: '.$row["id_tour"].'</p>'.
+                                                    '<p>'."Tên tour du lịch: ".$row["name_tour"].'</p>'.
+                                                    '<p>'."Loại tour: ".$row["name_category"].'</p>'.
+                                                    '<p>'."Hướng dẫn viên: ".$row["name_guider"].'</p>'.
+                                                    '<p>'."Nơi khởi hành: ".$row["place_start"].'</p>'.
+                                                    '<p>'."Ngày khởi hành: ".$row["date_go"].'</p>'.
+                                                    '<p>'."Điểm dừng chân: ".$row["place_des"].'</p>'.
+                                                    '</div>
+                                                <div class="col-sm-6">'.
+                                                    '<p>'."Ngày trở về: ".$row["date_back"].'</p>'.
+                                                    '<p>'."Vùng miền : ".$row["name_region"].'</p>'.
+                                                    '<p>'."Số vé người lớn: ".$row["num_adults"].'</p>'.
+                                                    '<p>'."Giá vé người lớn: ".$row["price_adult"].'</p>'.
+                                                    '<p>'."Số vé trẻ em: ".$row["num_child"].'</p>'.
+                                                    '<p>'."Giá vé trẻ em: ".$row["price_child"].'</p>'.
+                                                '</div>'.
+                                           '</div>'
+                                            ;
+                                        }
+                                    }
+                                }
+                                     
+                                 ?>
                         </div>
                     </div>
                 </div>
