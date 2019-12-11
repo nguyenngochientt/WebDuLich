@@ -43,7 +43,6 @@
         $connectDB->connect();
     ?>
 </head>
-
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -82,11 +81,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a><i class="glyphicon glyphicon-list-alt" style="margin-right: 12px;"></i> Danh mục
+                                    <a><i class="glyphicon glyphicon-list-alt" style="margin-right: 12px;"></i> Loại tour
                                         <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="index.html">Danh mục Tour</a></li>
-                                        <li><a href="index2.html">Danh mục bài viết</a></li>
+                                        <li><a href="danhmuc.php">Xem tất cả</a></li>
                                         <li><a href="index3.html">Thêm mới</a></li>
                                     </ul>
                                 </li>
@@ -118,14 +116,7 @@
                                     <a><i class="glyphicon glyphicon-record" style="margin-right: 12px;"></i> Booking
                                     </a>
                                 </li>
-                                <li>
-                                    <a><i class="glyphicon glyphicon-tree-conifer" style="margin-right: 12px;"></i> Địa
-                                        điểm du lịch <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="index.html">Xem tất cả</a></li>
-                                        <li><a href="index2.html">Thêm mới</a></li>
-                                    </ul>
-                                </li>
+                               
                                 <li>
                                     <a><i class="glyphicon glyphicon-user" style="margin-right: 12px;"></i> Customer
                                     </a>

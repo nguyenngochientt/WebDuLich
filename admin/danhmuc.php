@@ -27,7 +27,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Bảng điều khiển <small>Tours</small></h2>
+                            <h2>Bảng điều khiển <small>Danh mục</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -38,27 +38,20 @@
                             <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>ID Tour</th>
-                                        <th>Tên tour</th>
-                                        <th>Điểm khởi hành</th>
-                                        <th>Thời gian khởi hành</th>
-                                        <th>Xem chi tiết</th>
-                                     
+                                        <th>ID Danh mục</th>
+                                        <th>Tên danh mục</th>
                                     </tr>
                                 </thead>
                                 <tbody> 
                                 <?php
-                                     $select="select * from tour";
+                                     $select="select * from category";
                                      $result=mysqli_query( $connectDB->conn, $select);
                                      if(mysqli_num_rows($result)>0){
                                          while($row=mysqli_fetch_assoc($result)){
                                              echo '
-                                             <tr >
-                                                <td>'.$row["id_tour"].'</td>'.
-                                                '<td>'.$row["name_tour"].'</td>'.
-                                                '<td>'.$row["place_start"].'</td>'.
-                                                '<td>'.$row["date_go"].'</td>'.
-                                                '<td>'.'<a href="detail_tour.php?detail=detail&id="'.$row["id_tour"].'>'."Xem chi tiết".'</a></td>'.
+                                             <tr>
+                                                <td>'.$row["id_category"].'</td>'.
+                                                '<td>'.$row["name_category"].'</td>'.
                                             '</tr>'
                                              ;
                                          }
