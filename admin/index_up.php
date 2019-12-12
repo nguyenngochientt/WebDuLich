@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Upload nhiều ảnh xem trước và thanh tiến trình</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
 	<div class="box-upload">
 		<h2>Upload hình ảnh</h2>
 		<form action="upload.php" method="POST" enctype="multipart/form-data" id="formUpload" onsubmit="return false;">
@@ -22,5 +15,3 @@
 	<script src="admin/js/jquery.js"></script>
 	<script src="admin/js/jquery.form.js"></script>
 	<script src="admin/js/main.js"></script>
-</body>
-</html>

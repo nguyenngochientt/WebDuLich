@@ -17,7 +17,6 @@
                         <div class="x_content">
                             <form method="post"  action="admin/function/tour.php">
                                 <form class="form-horizontal form-label-left">
-
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Tên tour du lịch</label>
                                         <div class="col-md-9 col-sm-9 ">
@@ -28,11 +27,17 @@
                                         <label class="control-label col-md-3 col-sm-3 ">Hướng dẫn viên</label>
                                         <div class="col-md-9 col-sm-9 ">
                                             <select class="form-control" name="guider">
-                                                <option>Choose option</option>
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                                <option>Option three</option>
-                                                <option>Option four</option>
+                                            <?php
+                                                $select="select * from tour_guider";
+                                                $result=mysqli_query( $connectDB->conn, $select);
+                                                if(mysqli_num_rows($result)>0){
+                                                    while($row=mysqli_fetch_assoc($result)){
+                                                        echo '
+                                                            <option>'.$row["name_guider"].'</option>';
+                                                        ;
+                                                    }
+                                                }
+                                            ?>
                                             </select>
                                         </div>
                                     </div>
@@ -40,11 +45,17 @@
                                         <label class="control-label col-md-3 col-sm-3 ">Vùng niềm</label>
                                         <div class="col-md-9 col-sm-9 ">
                                             <select class="form-control" name="region">
-                                                <option>Choose option</option>
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                                <option>Option three</option>
-                                                <option>Option four</option>
+                                                <?php
+                                                    $select="select * from region";
+                                                    $result=mysqli_query( $connectDB->conn, $select);
+                                                    if(mysqli_num_rows($result)>0){
+                                                        while($row=mysqli_fetch_assoc($result)){
+                                                            echo '
+                                                                <option>'.$row["name_region"].'</option>';
+                                                            ;
+                                                        }
+                                                    }
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -105,7 +116,23 @@
                                     <!-- end up load -->
                                 </form>
                             </form>
-                            <?php include __DIR__."/index_up.php" ?>
+                            <div class="box-upload">
+                            <h2>Upload hình ảnh</h2>
+                            <form action="upload.php" method="POST" enctype="multipart/form-data" id="formUpload" onsubmit="return false;">
+                                <div class="progress">
+                                    <div class="progress-bar">0%</div>
+                                </div>
+                                <input type="file" name="img_file[]" multiple="true" onchange="previewImg(event);" id="img_file" accept="image/*">
+                                <div class="box-preview-img"></div>
+                                <button type="reset" class="btn-reset">Làm mới</button>
+                                <button type="submit" class="btn-submit">Upload</button>
+                                <div class="output"></div>
+                            </form>
+                            </div>
+                            <script src="admin/js/jquery.js"></script>
+                            <script src="admin/js/jquery.form.js"></script>
+                            <script src="admin/js/main.js"></script>
+
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9  offset-md-3">
                                     <button type="button" class="btn btn-primary">Cancel</button>
