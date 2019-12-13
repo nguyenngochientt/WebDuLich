@@ -68,7 +68,7 @@ if(isset($_POST['Submit']) && !$errors)
 ?>
 <!-- nhớ đặt enctype to "multipart/frm-data"
 và sử dụng  input type "file" -->
-<form name="newad" method="post" enctype="multipart/form-data" action="admin/function/tour.php">
+<form name="newad" method="post" enctype="multipart/form-data" action="">
 	<table>
 	<tr><td><input type="file" name="image"></td></tr>
 	<tr><td><input name="Submit" type="submit" value="Upload image">

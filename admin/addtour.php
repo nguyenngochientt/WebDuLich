@@ -132,7 +132,7 @@
                                 </div>
                                 <!-- up load -->
                                 <div class="form-group row ">
-                                    <label class="control-label col-md-3 col-sm-3 ">tải ảnh lên</label>
+                                    <label class="control-label col-md-3 col-sm-3 ">Tải ảnh lên</label>
                                     <div class="col-md-9 col-sm-9 ">
                                     <?php
                                         // Ấn định  dung lượng file ảnh upload
@@ -154,7 +154,7 @@
                                         //If the error occures the file will not be uploaded.
                                         $errors=0;
                                         //checks if the form has been submitted
-                                        if(isset($_POST['submit']))
+                                        if(isset($_POST['Submit']))
                                         {
                                         // lấy tên file upload
                                         $image=$_FILES['image']['name'];
@@ -204,31 +204,31 @@
                                         ?>
                                         <!-- nhớ đặt enctype to "multipart/frm-data"
                                         và sử dụng  input type "file" -->
-                                        <input type="file" name="image">
-
-                                    </div>
+                                        <form name="newad" method="post" enctype="multipart/form-data" action="">
+                                            <table>
+                                            <tr><td><input type="file" name="image"></td></tr>
+                                            <tr><td><input name="Submit" type="submit" value="Upload image">
+                                            </td></tr>
+                                            </table>
+                                        </form>
+                                     </div>
                                 </div>
-                                <!-- end up load -->
                                 <div class="form-group row ">
                                     <label class="control-label col-md-3 col-sm-3 ">Submit</label>
                                     <div class="col-md-9 col-sm-9 ">
-                                    <input type="submit"  name="submit" value="Submit">
+                                    <input type="submit"  name="submit" value="submit">
                                     </div>
                                 </div>
-                            </form>
                             <div class="box-upload">
+                                <!-- end up load -->
+                                
+                            </form>
                             </div>
                             <script src="admin/js/jquery.js"></script>
                             <script src="admin/js/jquery.form.js"></script>
                             <script src="admin/js/main.js"></script>
 
-                            <div class="form-group">
-                                <div class="col-md-9 col-sm-9  offset-md-3">
-                                    <button type="button" class="btn btn-primary">Cancel</button>
-                                    <button type="reset" class="btn btn-primary">Reset</button>
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

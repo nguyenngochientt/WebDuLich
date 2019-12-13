@@ -1,6 +1,7 @@
 <div class="container">
     <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours mới</h3>';?>
     <div class="row">
+   
         <?php 
             $select="select * from tour";
             $result=mysqli_query( $connectDB->conn, $select);
@@ -9,7 +10,7 @@
                     echo "<div class='col-sm-3 item' style='float:left'>
                             <div class='item'>
                                 <div class='tour-col-sm-3'>
-                                    <img src='assets/images/iloveimg-resized/hoian.jpg'>".
+                                <img src='admin/images/".$row['img_url']."'>".
                                     "<h5>".$row['name_tour']."</h5>".
                                     "<p>Nơi khởi hành:".$row['place_start']."</p>".
                                     "<p>Điêm dừng chân:".$row['place_des']."</p>".
