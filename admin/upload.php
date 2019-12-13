@@ -56,24 +56,22 @@ $newname="images/".$image_name;
 $copied = copy($_FILES['image']['tmp_name'], $newname);
 if (!$copied)
 {
-echo '<h1> File hình này đã tồn tại </h1>';
+echo '<p> File hình này đã tồn tại </p>';
 $errors=1;
 }}}}
 
 if(isset($_POST['Submit']) && !$errors)
 {
-echo "<h1>File hình đã được Upload thành công </h1>";
+	echo "<p>File hình đã được Upload thành công </p>";
 }
 
 ?>
-
 <!-- nhớ đặt enctype to "multipart/frm-data"
 và sử dụng  input type "file" -->
-<form name="newad" method="post" enctype="multipart/form-data"
-action="">
-<table>
-<tr><td><input type="file" name="image"></td></tr>
-<tr><td><input name="Submit" type="submit" value="Upload image">
-</td></tr>
-</table>
+<form name="newad" method="post" enctype="multipart/form-data" action="admin/function/tour.php">
+	<table>
+	<tr><td><input type="file" name="image"></td></tr>
+	<tr><td><input name="Submit" type="submit" value="Upload image">
+	</td></tr>
+	</table>
 </form>

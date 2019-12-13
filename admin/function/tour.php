@@ -1,24 +1,33 @@
-<!-- <?php 
-// require 'connect.php';
-// $tenmon = mysqli_real_escape_string($conn, $_POST['tenmon']);
-// $madanhmuc = mysqli_real_escape_string($conn, $_POST['madanhmuc']);
-// $size = mysqli_real_escape_string($conn, $_POST['size']);
-// $gia = mysqli_real_escape_string($conn, $_POST['gia']);
+ <?php 
 
-// $tenmon=$_POST['tenmon'];
-// $madanhmuc=$_POST['madanhmuc'];
-// $size=$_POST['size'];
-// $gia=$_POST['gia'];
+ include '..\..\model\connectDB.php';
+ use model\connectDB;
+ $connectDB=new connectDB("tctdlich");
+ $connectDB->connect();
+ //khai báo
+$name_tour=$_POST["name_tour"];
+echo "upload";
+$tour_guider_id=$_POST["tour_guider_id"];
+$id_region=$_POST["id_region"];
+$place_start=$_POST["place_start"];
+$place_des=$_POST["place_des"];
+$date_go=$_POST["date_start"];
+$date_back=$_POST["date_back"];
+$price_adutls=$_POST["price_adutls"];
+$price_child=$_POST["price_child"];
+$num_adult=$_POST["num_adult"];
+$num_child=$_POST["num_child"];
+$image=$_POST["image"];
+$id_category=$_POST["id_category"];
+ $select="insert into tour(name_tour,tour_guider_id,id_region,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child,id_category)
+     values('$name_tour','$tour_guider_id','$id_region','$place_start','$place_des','$date_go','$date_back','$image','$num_adult','$num_child','$price_adutls','$price_child','')";
+ $result=mysqli_query( $connectDB->conn, $select);
+ 
+if($result)
+{
+    echo "Them thanh cong";
+}
 
-//$sql ="insert into monan(tenmon,madanhmuc,size,gia) values ('ga chien',1,'lon',200000);";
-//$sql ="insert into monan(tenmon,madanhmuc,size,gia) values ('$tenmon',$madanhmuc,'$size',$gia);";
-// $sql="update  monan set tenmon='khoai tay' where mamon=1;";
-// $sql ="delete from monan where mamon=1;";
 
-// if(!mysqli_query($conn,$sql))
-// {
-// die ('Loi sql'.mysql_error($conn));
-// }
- // echo "Them thanh cong";
 //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
  ?> -->
