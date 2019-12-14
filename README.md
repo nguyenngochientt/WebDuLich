@@ -1,5 +1,5 @@
 
-# web site đặt tour du lịch
+# Website đặt tour du lịch
 ## Mô tả:
 - Website đặt tour du lịch là một hệ thống tra cứu và đặt tour du lịch trực tuyến.
 - Website cho phép người sở hữu cập nhật và đăng tải các tour du lịch lên trang web.
