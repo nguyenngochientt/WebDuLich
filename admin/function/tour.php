@@ -53,13 +53,12 @@ $image_name=time().'.'.$extension;
 // gán thêm cho file này đường dẫn
 $newname="images/".$image_name;
 // kiểm tra xem file hình này đã upload lên trước đó chưa
-//$copied = copy($_FILES['image']['tmp_name'], $newname);
-// if (!$copied)
-// {
-// echo '<p> File hình này đã tồn tại </p>';
-// $errors=1;
-// }
-}}}
+$copied = copy($_FILES['image']['tmp_name'], $newname);
+if (!$copied)
+{
+echo '<p> File hình này đã tồn tại </p>';
+$errors=1;
+}}}}
 
 if(isset($_POST['Submit']) && !$errors)
 {
@@ -94,4 +93,4 @@ $id_category=$_POST["id_category"];
     echo "Error: " . $sql . "<br>" . mysqli_error($connectDB->conn);
 }
 //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
- ?> -->
+ ?> 
