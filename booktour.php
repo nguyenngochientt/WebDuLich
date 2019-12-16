@@ -42,23 +42,35 @@
             <div class="row">
                 <div class="col-sm-6 image column_booking">
                     <div class="title">
-                        <p>Tour du lịch</p>
+                        <p></p>
                     </div>
                     <div>
-                        <img src="assets/images/iloveimg-resized/hoian.jpg">
+                    <?php 
+                        if(isset($_GET['id'])){
+                            $id=$_GET['id'];
+                            $select="SELECT tour.img_url from tour
+                            WHERE  id_tour=".$id;
+                            $result=mysqli_query( $connectDB->conn, $select);
+                            if(mysqli_num_rows($result)>0){
+                                while($row=mysqli_fetch_assoc($result)){
+                                    echo "<img src='admin/images/".$row['img_url']."' style='width: 541px;height: 462px;'>";
+                                }
+                            }
+                        }
+                    ?>    
                     </div>
                     <div class="#" style="margin-top:70px">
                         <div style="float:left" class="col-sm-6">
-                            <div><img src="assets/images/iloveimg-resized/hoian2.jpg" style="width:100%; height:45%"></div>
+
                         </div>
                         <div  style="float:left" class="col-sm-6">
-                            <div><img src="assets/images/iloveimg-resized/hoian2.jpg" style="width:100%; height:45%"></div>
+                            
                         </div>  
                     </div>
                 </div>
                 <div class="col-sm-6 ">
                     <div class="title">
-                        <p>Tour du lịch</p>
+                        <p></p>
                     </div>
                     <?php
                     if(isset($_GET['id'])){
@@ -93,7 +105,7 @@
                     ?>
                 </div>
             </div>
-            <div class="row nav_tab" style="margin-top: 312px;">
+            <div class="row nav_tab" style="margin-top: 198px;">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="tab-bootstrap" data-toggle="tab" href="#lotrinhchuyendi"

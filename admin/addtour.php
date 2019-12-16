@@ -15,7 +15,6 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="x_content">
-
                             <form class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data" action="">
                                 <div class="form-group row ">
                                     <label class="control-label col-md-3 col-sm-3 ">Tên tour du lịch</label>

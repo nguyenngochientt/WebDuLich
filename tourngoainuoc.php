@@ -39,17 +39,17 @@
     <?php include_once __DIR__."/commont_layout/choose_city.html" ?>
     <!-- end chọn tỉnh thành -->
     <div class="container">
-    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours trong nước</h3>';?>
+    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours ngoài nước</h3>';?>
     <div class="row">
         <?php 
-            $select="select * from tour where id_category='1'";
+            $select="select * from tour where id_category='2'";
             $result=mysqli_query( $connectDB->conn, $select);
             if(mysqli_num_rows($result)>0){
                 while($row=mysqli_fetch_assoc($result)){
                     echo "<div class='col-sm-3 item' style='float:left'>
                             <div class='item'>
                                 <div class='tour-col-sm-3'>
-                                    <img src='admin/images/".$row['img_url']."'>".
+                                <img src='admin/images/".$row['img_url']."'>".
                                     "<h5>".$row['name_tour']."</h5>".
                                     "<p>Nơi khởi hành:".$row['place_start']."</p>".
                                     "<p>Điêm dừng chân:".$row['place_des']."</p>".

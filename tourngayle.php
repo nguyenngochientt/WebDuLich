@@ -39,10 +39,10 @@
     <?php include_once __DIR__."/commont_layout/choose_city.html" ?>
     <!-- end chọn tỉnh thành -->
     <div class="container">
-    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours trong nước</h3>';?>
+    <?php echo '<h3 class="h3_" style="margin-bottom:30px">Tours ngày lễ</h3>';?>
     <div class="row">
         <?php 
-            $select="select * from tour where id_category='1'";
+            $select="select * from tour where id_category='3'";
             $result=mysqli_query( $connectDB->conn, $select);
             if(mysqli_num_rows($result)>0){
                 while($row=mysqli_fetch_assoc($result)){

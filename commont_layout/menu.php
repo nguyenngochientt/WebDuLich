@@ -26,8 +26,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="tourtrongnuoc.php">Tour trong nước</a>
-                                <a class="dropdown-item" href="#">Tour ngoài nước</a>
-                                <a class="dropdown-item" href="#">Ngày lễ nước</a>
+                                <a class="dropdown-item" href="tourngoainuoc.php">Tour ngoài nước</a>
+                                <a class="dropdown-item" href="tourngayle.php">Ngày lễ nước</a>
                                 <!-- <?php
                                      
                                     $select="select name_category from category";
