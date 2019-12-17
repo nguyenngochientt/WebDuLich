@@ -29,7 +29,6 @@
                                 <a class="dropdown-item" href="tourngoainuoc.php">Tour ngoài nước</a>
                                 <a class="dropdown-item" href="tourngayle.php">Ngày lễ nước</a>
                                 <!-- <?php
-                                     
                                     $select="select name_category from category";
                                     $result=mysqli_query( $connectDB->conn, $select);
                                     if(mysqli_num_rows($result)>0){
@@ -38,7 +37,6 @@
                                         }
                                     }
                                 ?> -->
-                              
                             </div>
                         </li>
 
