@@ -40,9 +40,9 @@
                                     <tr>
                                         <th>ID Tour</th>
                                         <th>Tên tour</th>
-                                        <th>Điểm khởi hành</th>
-                                        <th>Thời gian khởi hành</th>
-                                        <th>Xem chi tiết</th>
+                                        <th style="width:70px">Điểm khởi hành</th>
+                                        <th style="width:70px">Thời gian khởi hành</th>
+                                        <th style="width:70px">Xem chi tiết</th>
                                      
                                     </tr>
                                 </thead>
