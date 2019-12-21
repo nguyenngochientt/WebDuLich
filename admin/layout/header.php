@@ -85,7 +85,7 @@
                                         <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="danhmuc.php">Xem tất cả</a></li>
-                                        <li><a href="index3.html">Thêm mới</a></li>
+                                        <li><a href="addCategory.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>
