@@ -34,43 +34,36 @@
                         <div class="x_content">
                             <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
+                                    
                                     <tr>
                                         <th>ID hướng dẫn viên</th>
                                         <th>Tên hướng dẫn viên</th>
                                         <th>Ngày sinh</th>
                                         <th>Địa chỉ</th>
                                         <th>Số điện thoại</th>
+                                     
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Nguyễn Ngọc Hiền</td>
-                                        <td>21/2/1998</td>
-                                        <td>Diên Lạc</td>
-                                        <td>0328627664</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Nguyễn Ngọc Hiền</td>
-                                        <td>21/2/1998</td>
-                                        <td>Diên Lạc</td>
-                                        <td>0328627664</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Nguyễn Ngọc Hiền</td>
-                                        <td>21/2/1998</td>
-                                        <td>Diên Lạc</td>
-                                        <td>0328627664</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Nguyễn Ngọc Hiền</td>
-                                        <td>21/2/1998</td>
-                                        <td>Diên Lạc</td>
-                                        <td>0328627664</td>
-                                    </tr>
+                                <?php
+                                     $select="select * from tour_guider";
+                                     $result=mysqli_query( $connectDB->conn, $select);
+                                     if(mysqli_num_rows($result)>0){
+                                         while($row=mysqli_fetch_assoc($result)){
+                                             echo '
+                                             <tr >
+                                                <td>'.$row["id_guider"].'</td>'.
+                                                '<td>'.$row["name_guider"].'</td>'.
+                                                '<td>'.$row["birthday"].'</td>'.
+                                                '<td>'.$row["address"].'</td>'.
+                                                '<td>'.$row["tel"].'</td>'.
+                                                
+                                            '</tr>'
+                                             ;
+                                         }
+                                     }
+                                 ?>
+                                   
                                 </tbody>
                             </table>
                         </div>
