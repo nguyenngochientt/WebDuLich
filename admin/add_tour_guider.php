@@ -20,26 +20,26 @@
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Tên hướng dẫn viên</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Tên hướng dẫn viên...">
+                                            <input type="text" class="form-control" name="TenHDV" placeholder="Tên hướng dẫn viên...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Ngày sinh</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Ngày sinh...">
+                                            <input type="text" class="form-control" name="NgaySinh" placeholder="Ngày sinh...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Đại chỉ</label>
                                         <div class="col-md-9 col-sm-9 ">
-                                            <input type="text" class="form-control" placeholder="Địa chỉ...">
+                                            <input type="text" class="form-control" name="DiaChi" placeholder="Địa chỉ...">
                                         </div>
                                     </div>
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Số điến thoại</label>
                                         <div class="col-md-9 col-sm-9 ">
                                             <input type="text" class="form-control"
-                                                placeholder="Số điến thoại...">
+                                                placeholder="Số điến thoại..." name="SDT">
                                         </div>
                                     </div>
                                     <div class="ln_solid"></div>
