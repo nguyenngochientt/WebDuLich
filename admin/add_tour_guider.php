@@ -14,7 +14,7 @@
                         </ul>
                         <div class="clearfix"></div>
                         <div class="x_content">
-                            <form method="get">
+                            <form method="post" actioin="">
                                 <form class="form-horizontal form-label-left">
 
                                     <div class="form-group row ">
@@ -47,10 +47,43 @@
                                         <div class="col-md-9 col-sm-9  offset-md-3">
                                             <button type="button" class="btn btn-primary">Cancel</button>
                                             <button type="reset" class="btn btn-primary">Reset</button>
-                                            <button type="submit" class="btn btn-success">Submit</button>
+                                            <button type="submit" name="submit" class="btn btn-success">Submit</button>
                                         </div>
                                     </div>
+                                    <?php 
+                                    if(isset($_POST['submit'])){
+                                        $TenHDV="";
+                                        $NgaySinh="";
+                                        $DiaChi="";
+                                        $SDT="";
+                                        if(isset($_POST['TenHDV'])){
+                                            $TenHDV=$_POST['TenHDV'];
+                                        }
+                                        if(isset($_POST['NgaySinh'])){
+                                            $NgaySinh=$_POST['NgaySinh'];
+                                        }
+                                        if(isset($_POST['DiaChi'])){
+                                            $DiaChi=$_POST['DiaChi'];
+                                        }
+                                        if(isset($_POST['SDT'])){
+                                            $SDT=$_POST['SDT'];
+                                        }
+                                        $sql="insert into tour_guider(name_guider,birthday,address,tel)
+                                        values('".$TenHDV."','".$NgaySinh."','".$DiaChi."','".$SDT."')";
+                                        //$result=mysqli_query( $connectDB->conn, $select);
+        
+                                        if (mysqli_query($connectDB->conn, $sql)) {
+                                            // echo "New record created successfully";
+                                        
+                                        } else {
+                                            echo "Error: " . $sql . "<br>" . mysqli_error($connectDB->conn);
+                                        }
+
+                                    }
+                                       
+                                    ?>
                                     <div class="x_panel">
+
                   <div class="x_title">
                     <h2>Dropzone multiple file uploader</h2>
                     <ul class="nav navbar-right panel_toolbox">
