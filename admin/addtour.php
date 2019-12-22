@@ -25,19 +25,18 @@
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3 ">Loại tour</label>
                                     <div class="col-md-9 col-sm-9 ">
-
                                         <select class="form-control" name="id_category">
                                             <?php
-                                    $select="select * from category";
-                                    $result=mysqli_query( $connectDB->conn, $select);
-                                    if(mysqli_num_rows($result)>0){
-                                        while($row=mysqli_fetch_assoc($result)){
-                                            echo '
-                                                <option>'.$row["id_category"].'</option>';
-                                            ;
-                                        }
-                                    }
-                                ?>
+                                                $select="select * from category";
+                                                $result=mysqli_query( $connectDB->conn, $select);
+                                                if(mysqli_num_rows($result)>0){
+                                                    while($row=mysqli_fetch_assoc($result)){
+                                                        echo '
+                                                            <option>'.$row["name_category"].'</option>';
+                                                        ;
+                                                    }
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
