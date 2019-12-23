@@ -26,16 +26,12 @@
                                     <label class="control-label col-md-3 col-sm-3 ">Loại tour</label>
                                     <div class="col-md-9 col-sm-9 ">
                                         <select class="form-control" name="id_category">
-                                            <?php
-                                                $select="select * from category";
-                                                $result=mysqli_query( $connectDB->conn, $select);
-                                                if(mysqli_num_rows($result)>0){
-                                                    while($row=mysqli_fetch_assoc($result)){
-                                                        echo '
-                                                            <option>'.$row["name_category"].'</option>';
-                                                        ;
-                                                    }
-                                                }
+                                             <?php
+                                              include "../admin/function/category/category.php";
+                                               $category=new TXSCategory();
+                                               foreach($category->HienThi() as $key => $value){
+                                                    echo '<option>'.$value->name_category.'</option>';
+                                             }
                                             ?>
                                         </select>
                                     </div>
@@ -147,7 +143,8 @@
                             </form>
                         <!--------------------------- php ----------------------------------------------->
                         <?php 
-                           
+                         //   include "../admin/function/tour/tour-server.php";
+                            include "../admin/function/tour/tour.php";
                            if(isset($_POST['Submit'])){
                                // Ấn định  dung lượng file ảnh upload
                                define ("MAX_SIZE","8000");
@@ -197,7 +194,6 @@
                                echo '<h1>Vượt quá dung lượng cho phép!</h1>';
                                $errors=1;
                                }
-
                                // đặt tên mới cho file hình up lên
                                $image_name=time().'.'.$extension;
                                // gán thêm cho file này đường dẫn
@@ -212,86 +208,74 @@
                                }
                                }
                                }
-
                                if(isset($_POST['Submit']) && !$errors)
                                {
                                    // echo "<p>File hình đã được Upload thành công </p>";
                                   
                                }
-                               //////
-
-                               //khai báo=
+                               $Addtour=new Tour();
+                           
+                               $tour=new TXSTour();
                                $name_tour="";
                                if(isset($_POST["name_tour"])){
-                                   $name_tour=$_POST["name_tour"];
+                                $Addtour->name_tour=$_POST["name_tour"];
                                }
                                $tour_guider_id="";
                                if(isset($_POST["tour_guider_id"])){
-                                   $tour_guider_id=$_POST["tour_guider_id"];
+                                    $Addtour->tour_guide_id=$_POST["tour_guider_id"];
                                }
                                $id_region="";
-                               if(isset($_POST["place_start"])){
-                                   $id_region=$_POST["id_region"];
+                               if(isset($_POST["id_region"])){
+                                $Addtour->id_region=$_POST["id_region"];
                                }
                                $place_start="";
                                if(isset($_POST["place_start"])){
-                                   $place_start=$_POST["place_start"];
+                                $Addtour->place_start=$_POST["place_start"];
                                }
                                $place_des="";
                                if(isset($_POST["place_des"])){
-                                   $place_des=$_POST["place_des"];
+                                $Addtour->place_des=$_POST["place_des"];
                                }
                                $date_go="";
                                if(isset($_POST["date_start"])){
-                                   $date_go=$_POST["date_start"];
+                                $Addtour->date_go=$_POST["date_start"];
                                }
                                $date_back="";
                                if(isset($_POST["date_back"])){
-                                   $date_back=$_POST["date_back"];
+                                $Addtour->date_back=$_POST["date_back"];
                                }
                                $price_adutls="";
                                if(isset($_POST["price_adutls"])){
-                                   $price_adutls=$_POST["price_adutls"];
+                                $Addtour->price_adutls=$_POST["price_adutls"];
                                }
                                $price_child="";
                                if(isset($_POST["price_child"])){
-                                   $price_child=$_POST["price_child"];
+                                $Addtour->price_child=$_POST["price_child"];
                                }
                                $num_adult="";
                                if(isset($_POST["num_adult"])){
-                                   $num_adult=$_POST["num_adult"];
+                                $Addtour->num_adult=$_POST["num_adult"];
                                }
                                $num_child="";
                                if(isset($_POST["num_child"])){
-                                   $num_child=$_POST["num_child"];
+                                $Addtour->num_child=$_POST["num_child"];
                                }
                                $image=$image_name;
+                               $Addtour->img_url=$image;
                                // if(isset($_POST["image"])){
                                //     $image=$_POST["image"];
                                // }
                                $id_category="";
                                if(isset($_POST["id_category"])){
-                                   $id_category=$_POST["id_category"];
+                                $Addtour->id_category=$_POST["id_category"];
                                }
                                
-                               $sql="insert into tour(name_tour,tour_guide_id,id_region,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child,id_category)
-                                   values('".$name_tour."','".$tour_guider_id."','".$id_region."','".$place_start."','".$place_des."','".$date_go."','".$date_back."','".$image."','".$num_adult."','".$num_child."','".$price_adutls."','".$price_child."','".$id_category."')";
-                               //$result=mysqli_query( $connectDB->conn, $select);
-
-                               if (mysqli_query($connectDB->conn, $sql)) {
-                                   // echo "New record created successfully";
-                                  
-                               } else {
-                                   echo "Error: " . $sql . "<br>" . mysqli_error($connectDB->conn);
-                               }
-                               
-
+                               print_r($Addtour);
+                               $tour->Them($Addtour);
                                //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
                            }
                          
                         ?>
-
-                            
                             </div>
                             <script src="admin/js/jquery.js"></script>
                             <script src="admin/js/jquery.form.js"></script>

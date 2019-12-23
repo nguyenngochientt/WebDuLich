@@ -52,18 +52,17 @@
                                     $tour=new TXSTour();
                                     foreach($tour->HienThi() as $key => $value){
                                         echo 
-                                         '
-                                             <tr >
-                                                <td>'.$value->id_tour.'</td>'.
-                                                '<td>'.$value->name_tour.'</td>'.
-                                                '<td>'.$value->place_start.'</td>'.
-                                                '<td>'.$value->date_go.'</td>'.
-                                                '<td>'.
-                                                    '<a href="detail_tour.php?id='.
-                                                    $value->id_tour.'"'.
-                                                        '>Xem chi tiết'.
-                                                    '</a></td>'.
-                                            '</tr>';
+                                        '<tr >
+                                            <td>'.$value->id_tour.'</td>'.
+                                            '<td>'.$value->name_tour.'</td>'.
+                                            '<td>'.$value->place_start.'</td>'.
+                                            '<td>'.$value->date_go.'</td>'.
+                                            '<td>'.
+                                                '<a href="detail_tour.php?id='.
+                                                $value->id_tour.'"'.
+                                                    '>Xem chi tiết'.
+                                                '</a></td>'.
+                                        '</tr>';
                                      }
                                     ?>
                                 </tbody>
