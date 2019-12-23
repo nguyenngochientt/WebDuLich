@@ -3,7 +3,7 @@
     class Tour
     {
         public $id_tour="";
-        public $tour_guider_id="";
+        public $tour_guide_id="";
         public $id_region="";
         public $name_tour="";
         public $place_start="";
