@@ -273,7 +273,7 @@
                                if(isset($_POST["id_category"])){
                                    $id_category=$_POST["id_category"];
                                }
-
+                               
                                $sql="insert into tour(name_tour,tour_guide_id,id_region,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child,id_category)
                                    values('".$name_tour."','".$tour_guider_id."','".$id_region."','".$place_start."','".$place_des."','".$date_go."','".$date_back."','".$image."','".$num_adult."','".$num_child."','".$price_adutls."','".$price_child."','".$id_category."')";
                                //$result=mysqli_query( $connectDB->conn, $select);

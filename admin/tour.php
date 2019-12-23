@@ -48,30 +48,27 @@
                                 </thead>
                                 <tbody> 
                                 <?php
-                                  include '..\..\function\tour\tour.php';
-                                  use Tour\Tour;
-                                    //  $select="select * from tour";
-                                    //  $result=mysqli_query( $connectDB->conn, $select);
-                                    //  if(mysqli_num_rows($result)>0){
-                                    //      while($row=mysqli_fetch_assoc($result)){
-                                    //          echo '
-                                    //          <tr >
-                                    //             <td>'.$row["id_tour"].'</td>'.
-                                    //             '<td>'.$row["name_tour"].'</td>'.
-                                    //             '<td>'.$row["place_start"].'</td>'.
-                                    //             '<td>'.$row["date_go"].'</td>'.
-                                    //             '<td>'.
-                                    //                 '<a href="detail_tour.php?id='.
-                                    //                     $row["id_tour"].'"'.
-                                    //                     '>Xem chi tiết'.
-                                    //                 '</a></td>'.
-                                    //         '</tr>'
-                                    //          ;
-                                    //      }
-                                    //  }
-                                 ?>
+                                    include "../admin/function/tour/tour.php";
+                                    $tour=new TXSTour();
+                                    foreach($tour->HienThi() as $key => $value){
+                                        echo 
+                                         '
+                                             <tr >
+                                                <td>'.$value->id_tour.'</td>'.
+                                                '<td>'.$value->name_tour.'</td>'.
+                                                '<td>'.$value->place_start.'</td>'.
+                                                '<td>'.$value->date_go.'</td>'.
+                                                '<td>'.
+                                                    '<a href="detail_tour.php?id='.
+                                                    $value->id_tour.'"'.
+                                                        '>Xem chi tiết'.
+                                                    '</a></td>'.
+                                            '</tr>';
+                                     }
+                                    ?>
                                 </tbody>
                             </table>
+                          
                         </div>
                     </div>
 

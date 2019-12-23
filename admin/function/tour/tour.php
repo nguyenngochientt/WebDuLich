@@ -1,10 +1,11 @@
 <?php 
    
     // ///////////////////////////////////////
-    include 'tour-server.php';
-    use TourOpject\Tour;
-    include '../../../model/connectDB.php';
-    use model\connectDB;        
+    // include 'tour-server.php';
+    // use TourOpject\Tour;
+  //  include 'model/connectDB.php';
+    use \model\connectDB;      
+    
     class TXSTour{
         private $connectDB="";
         public $tour="";
@@ -26,15 +27,7 @@
                   
                 }
             }
-            // foreach($this->tour as $key => $value){
-            //    echo 
-            //    "<h4>".$value->name_tour."</h4>"
-            //    .$value->id_tour."<br>"
-            //    .$value->tour_guide_id."<br>"
-            //    .$value->place_start."<br>"
-            //    .$value->place_des."<br>"
-            //     ;
-            // }
+            
             return $this->tour;
         }
         public function Them($name_tour,$tour_guider_id,$id_region,$place_start,$place_des,$date_go,$date_back,$image,$num_adult,$num_child,$price_adutls,$price_child,$id_category){
