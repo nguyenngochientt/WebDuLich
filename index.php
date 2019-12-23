@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    <form action="admin/function/tour/tour.php">
+        <button type="submit">Chuyển</button>
+    </form>
     <!-- top bar -->
     <?php include_once __DIR__."/commont_layout/topbar.html" ?>
     <!--end topbar -->
