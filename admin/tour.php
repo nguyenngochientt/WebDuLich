@@ -43,7 +43,6 @@
                                         <th style="width:70px">Điểm khởi hành</th>
                                         <th style="width:70px">Thời gian khởi hành</th>
                                         <th style="width:70px">Xem chi tiết</th>
-                                     
                                     </tr>
                                 </thead>
                                 <tbody> 

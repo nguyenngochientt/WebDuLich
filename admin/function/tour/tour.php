@@ -43,6 +43,9 @@
                 echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
             }
         }
+        public function Sua($tour){
+            
+        }
     }
     // $tour=new TXSTour();
     // print_r($tour->HienThi()) ;   
