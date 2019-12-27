@@ -44,7 +44,24 @@
             }
         }
         public function Sua($tour){
-            
+            $sql="
+            update from tour
+            set name_tour='$tour->name_tour';
+            update from tour
+            set tour_guide_id='$tour->tour_guide_id';
+            update from tour
+            set id_region='$tour->id_region';
+            update from tour
+            set place_start='$tour->place_start';
+            update from tour
+            set place_des='$tour->place_des';
+            update from tour
+            set date_go='$tour->date_go';
+            update from tour
+            set date_back='$tour->date_back';
+            update from tour
+            set tour_guide_id='$tour->tour_guide_id';
+            ";
         }
     }
     // $tour=new TXSTour();
