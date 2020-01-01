@@ -1,4 +1,4 @@
-<?php include_once __DIR__."/layout/header.php" ?>
+<?php include_once __DIR__."/header.php" ?>
 
 <!-- page content -->
 <div class="row">
@@ -47,7 +47,7 @@
                                 </thead>
                                 <tbody> 
                                 <?php
-                                    include "../admin/function/tour/tour.php";
+                                    include "../../../admin/function/tour/tour.php";
                                     $tour=new TXSTour();
                                     foreach($tour->HienThi() as $key => $value){
                                         echo 
@@ -77,4 +77,4 @@
     </div>
 </div>
 <!-- /page content -->
-<?php include_once __DIR__."/layout/footer.php" ?>
+<?php include_once __DIR__."/footer.php" ?>

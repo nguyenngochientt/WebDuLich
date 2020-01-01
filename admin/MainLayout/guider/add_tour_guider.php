@@ -1,4 +1,4 @@
-<?php include_once __DIR__."/layout/header.php" ?>
+<?php include_once __DIR__."/header.php" ?>
 <!-- page content -->
 <div class="row">
     <div class="col-sm-12">
@@ -119,4 +119,4 @@
     </div>
 </div>
 <!-- /page content -->
-<?php include_once __DIR__."/layout/footer.php" ?>
+<?php include_once __DIR__."/footer.php" ?>

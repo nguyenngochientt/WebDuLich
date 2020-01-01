@@ -1,4 +1,4 @@
-<?php include_once __DIR__."/layout/header.php" ?>
+<?php include_once __DIR__."/header.php" ?>
 <!-- page content -->
 <div class="row">
     <div class="col-sm-12">
@@ -57,7 +57,7 @@
                                                 '<td>'.$row["birthday"].'</td>'.
                                                 '<td>'.$row["address"].'</td>'.
                                                 '<td>'.$row["tel"].'</td>'.  
-                                                '<td> <img src="../assets/icon/delete.png" style="width: 55%;"> </td>'.  
+                                                '<td> <img src="../../assets/icon/delete.png" style="width: 55%;"> </td>'.  
                                             '</tr>'
                                              ;
                                          }
@@ -76,4 +76,4 @@
     </div>
 </div>
 <!-- /page content -->
-<?php include_once __DIR__."/layout/footer.php" ?>
+<?php include_once __DIR__."/footer.php" ?>

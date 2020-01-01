@@ -1,4 +1,4 @@
-<?php include_once __DIR__."/layout/header.php" ?>
+<?php include_once __DIR__."/header.php" ?>
     <!-- page content -->
 
 <div class="row">
@@ -27,7 +27,7 @@
                                     <div class="col-md-9 col-sm-9 ">
                                         <select class="form-control" name="id_category">
                                              <?php
-                                              include "../admin/function/category/category.php";
+                                              include "../../../admin/function/category/category.php";
                                                $category=new TXSCategory();
                                                foreach($category->HienThi() as $key => $value){
                                                     echo '<option>'.$value->name_category.'</option>';
@@ -144,7 +144,7 @@
                         <!--------------------------- php ----------------------------------------------->
                         <?php 
                          //   include "../admin/function/tour/tour-server.php";
-                            include "../admin/function/tour/tour.php";
+                            include "../../../admin/function/tour/tour.php";
                            if(isset($_POST['Submit'])){
                                // Ấn định  dung lượng file ảnh upload
                                define ("MAX_SIZE","8000");
@@ -289,4 +289,4 @@
 </div>
 <!-- /page content -->
 
-<?php include_once __DIR__."/layout/footer.php" ?>
+<?php include_once __DIR__."/footer.php" ?>
