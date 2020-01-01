@@ -92,8 +92,8 @@
                                     <a><i class="glyphicon glyphicon-certificate" style="margin-right: 12px;"></i> Hướng
                                         dẫn viên <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="tour_guider.php">Xem tất cả</a></li>
-                                        <li><a href="add_tour_guider.php">Thêm mới</a></li>
+                                        <li><a href="guider/tour_guider.php">Xem tất cả</a></li>
+                                        <li><a href="guider/add_tour_guider.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>

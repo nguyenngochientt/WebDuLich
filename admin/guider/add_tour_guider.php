@@ -16,7 +16,6 @@
                         <div class="x_content">
                             <form method="post" actioin="">
                                 <form class="form-horizontal form-label-left">
-
                                     <div class="form-group row ">
                                         <label class="control-label col-md-3 col-sm-3 ">Tên hướng dẫn viên</label>
                                         <div class="col-md-9 col-sm-9 ">
