@@ -36,12 +36,12 @@
                                 <thead>
                                     
                                     <tr>
-                                        <th>ID hướng dẫn viên</th>
+                                        <th>Mã số</th>
                                         <th>Tên hướng dẫn viên</th>
                                         <th>Ngày sinh</th>
                                         <th>Địa chỉ</th>
                                         <th>Số điện thoại</th>
-                                     
+                                        <th style="width:17px"> Xóa</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,8 +56,8 @@
                                                 '<td>'.$row["name_guider"].'</td>'.
                                                 '<td>'.$row["birthday"].'</td>'.
                                                 '<td>'.$row["address"].'</td>'.
-                                                '<td>'.$row["tel"].'</td>'.
-                                                
+                                                '<td>'.$row["tel"].'</td>'.  
+                                                '<td> <img src="../assets/icon/delete.png" style="width: 55%;"> </td>'.  
                                             '</tr>'
                                              ;
                                          }
