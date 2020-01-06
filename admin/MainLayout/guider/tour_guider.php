@@ -57,13 +57,13 @@
                                                 '<td>'.$row["birthday"].'</td>'.
                                                 '<td>'.$row["address"].'</td>'.
                                                 '<td>'.$row["tel"].'</td>'.  
-                                                '<td> <img src="../../../assets/icon/delete.png" style="width: 55%;"> </td>'.  
+                                                '<td> <button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </td>'. 
                                             '</tr>'
                                              ;
                                          }
                                      }
+                                       
                                  ?>
-                                   
                                 </tbody>
                             </table>
                         </div>

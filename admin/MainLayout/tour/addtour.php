@@ -192,6 +192,10 @@
                                if(isset($_POST["tour_guider_id"])){
                                     $Addtour->tour_guide_id=$_POST["tour_guider_id"];
                                }
+                               $id_region="";
+                               if(isset($_POST["id_region"])){
+                                $Addtour->id_region=$_POST["id_region"];
+                               }
                                $place_start="";
                                if(isset($_POST["place_start"])){
                                 $Addtour->place_start=$_POST["place_start"];
@@ -226,8 +230,15 @@
                                }
                                $image=$image_name;
                                $Addtour->img_url=$image;
+                               // if(isset($_POST["image"])){
+                               //     $image=$_POST["image"];
+                               // }
+                               $id_category="";
+                               if(isset($_POST["id_category"])){
+                                $Addtour->id_category=$_POST["id_category"];
+                               }
                                
-                               
+                               print_r($Addtour);
                                $tour->Them($Addtour);
                                //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
                            }
