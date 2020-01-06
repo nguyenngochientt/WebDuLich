@@ -53,7 +53,7 @@
                             $result=mysqli_query( $connectDB->conn, $select);
                             if(mysqli_num_rows($result)>0){
                                 while($row=mysqli_fetch_assoc($result)){
-                                    echo "<img src='admin/images/".$row['img_url']."' style='width: 541px;height: 462px;'>";
+                                    echo "<img src='admin/MainLayout/tour/images/".$row['img_url']."' style='width: 541px;height: 462px;'>";
                                 }
                             }
                         }
@@ -75,10 +75,9 @@
                     <?php
                     if(isset($_GET['id'])){
                         $id=$_GET['id'];
-                        $select="SELECT tour.*,category.*,tour_guider.*,region.*
-                        from 	tour, category, tour_guider,region
-                        WHERE tour.id_category=category.id_category AND
-                        tour.tour_guide_id=tour_guider.id_guider and region.id_region=tour.id_region
+                        $select="SELECT tour.*,tour_guider.*
+                        from 	tour,  tour_guider
+                        WHERE tour.tour_guide_id=tour_guider.id_guider 
                         and id_tour=".$id;
                         $result=mysqli_query( $connectDB->conn, $select);
                         if(mysqli_num_rows($result)>0){

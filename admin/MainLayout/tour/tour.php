@@ -43,6 +43,7 @@
                                         <th style="width:70px">Điểm khởi hành</th>
                                         <th style="width:70px">Thời gian khởi hành</th>
                                         <th style="width:70px">Xem chi tiết</th>
+                                        <th style="width:17px"> Xóa</th>
                                     </tr>
                                 </thead>
                                 <tbody> 
@@ -61,6 +62,7 @@
                                                 $value->id_tour.'"'.
                                                     '>Xem chi tiết'.
                                                 '</a></td>'.
+                                                '<td> <button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </td>'.  
                                         '</tr>';
                                      }
                                     ?>

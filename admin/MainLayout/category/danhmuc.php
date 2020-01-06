@@ -54,7 +54,7 @@
                                              <tr>
                                                 <td>'.$row["id_category"].'</td>'.
                                                 '<td>'.$row["name_category"].'</td>'.
-                                                '<td> <form action="" method="post"><button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </form></td>'.  
+                                                '<td> <button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </td>'.  
 
                                             '</tr>'
                                              ;
