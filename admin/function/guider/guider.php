@@ -15,7 +15,7 @@
             $this->connectDB->connect();
         }
         public function HienThi(){
-            $select="select * from guider";
+            $select="select * from tour_guider";
             $i=0;
             $result=mysqli_query( $this->connectDB->conn, $select);
             if(mysqli_num_rows($result)>0){
@@ -45,15 +45,23 @@
         }
         public function Sua($guider){
             $sql="
-            update from tour
+            update from tour_guider
             set name_guider='$guider->name_guider';
-            update from tour
-            set guider->birthday='$guider->birthday';
-            update from tour
-            set guider->tel='$guider->tel';
-            update from tour
-            set guider->img_url='$guider->img_url';
+            update from tour_guider
+            set birthday='$guider->birthday';
+            update from tour_guider
+            set tel='$guider->tel';
+            update from tour_guider
+            set  img_url->img_url='$guider->img_url';
             ";
+        }
+        public function Xoa($id){
+            $sql="delete from tour_guider where id_guider ='".$id."'";
+            if (mysqli_query($this->connectDB->conn, $sql)) {
+                 echo "Xóa thành công";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+            }
         }
     }
     // $tour=new TXSTour();

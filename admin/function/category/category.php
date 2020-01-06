@@ -54,7 +54,7 @@
         public function Xoa($id){
             $sql="delete from category where id_category ='".$id."'";
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                // echo "New record created successfully";
+                 echo "Xóa thành công";
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
             }

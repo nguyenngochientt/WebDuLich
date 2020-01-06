@@ -94,7 +94,7 @@
                                         '<p>'."Giá vé người lớn: <span>".$row["price_adult"].'</span></p>'.
                                         '<p>'."Số vé trẻ em: <span>".$row["num_child"].'</span></p>'.
                                         '<p>'."Giá vé trẻ em: <span>".$row["price_child"].'</span></p>'.
-                                        '<span class="booking_now">Đặt vé ngay</span>'.
+                                        '<a class="booking_now" href="detail_booking.php">Đặt vé ngay</a>'.
                                     '</li>'.
                                 '</ul>';
                                 ;

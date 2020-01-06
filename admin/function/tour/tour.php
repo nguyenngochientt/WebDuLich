@@ -45,22 +45,27 @@
         }
         public function Sua($tour){
             $sql="
-            update from tour
-            set name_tour='$tour->name_tour';
-            update from tour
-            set tour_guide_id='$tour->tour_guide_id';
-            update from tour
-            set place_start='$tour->place_start';
-            update from tour
-            set place_des='$tour->place_des';
-            update from tour
-            set date_go='$tour->date_go';
-            update from tour
-            set date_back='$tour->date_back';
+            update  tour
+            set name_tour='$tour->name_tour',
+            tour_guide_id='$tour->tour_guide_id',
+             place_start='$tour->place_start',
+             place_des='$tour->place_des',
+             date_go='$tour->date_go',
+             date_back='$tour->date_back'
+            where id_tour='$tour->id_tour'
+          
             ";
             if (mysqli_query($this->connectDB->conn, $sql)) {
                 // echo "New record created successfully";
             
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+            }
+        }
+        public function Xoa($id){
+            $sql="delete from tour where id_tour ='".$id."'";
+            if (mysqli_query($this->connectDB->conn, $sql)) {
+                 echo "Xóa thành công";
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
             }

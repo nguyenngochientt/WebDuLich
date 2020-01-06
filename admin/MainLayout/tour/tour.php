@@ -62,11 +62,16 @@
                                                 $value->id_tour.'"'.
                                                     '>Xem chi tiết'.
                                                 '</a></td>'.
-                                                '<td> <button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </td>'.  
+                                            '<td> <a href="tour.php?id='.$value->id_tour.'"><img src="../../../assets/icon/delete.png" style="width:70%"></a> </td>'. 
                                         '</tr>';
                                      }
+                                    if(isset($_GET['id'])){
+                                        $id=$_GET['id'];
+                                        $tour->Xoa($id);
+                                       
+                                    }
                                     ?>
-                                </tbody>
+                                </tbody>    
                             </table>
                           
                         </div>

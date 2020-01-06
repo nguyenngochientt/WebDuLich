@@ -46,24 +46,27 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                     $select="select * from tour_guider";
-                                     $result=mysqli_query( $connectDB->conn, $select);
-                                     if(mysqli_num_rows($result)>0){
-                                         while($row=mysqli_fetch_assoc($result)){
+                                    include "../../../admin/function/guider/guider.php";
+                                    $guider=new TXSGuider();
+                                    foreach($guider->HienThi() as $key => $value){
                                              echo '
                                              <tr >
-                                                <td>'.$row["id_guider"].'</td>'.
-                                                '<td>'.$row["name_guider"].'</td>'.
-                                                '<td>'.$row["birthday"].'</td>'.
-                                                '<td>'.$row["address"].'</td>'.
-                                                '<td>'.$row["tel"].'</td>'.  
-                                                '<td> <button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </td>'. 
+                                                <td>'.$value->id_guider.'</td>'.
+                                                '<td>'.$value->name_guider.'</td>'.
+                                                '<td>'.$value->birthday.'</td>'.
+                                                '<td>'.$value->address.'</td>'.
+                                                '<td>'.$value->tel.'</td>'.  
+                                                '<td> <a href="tour_guider.php?id='.$value->id_guider.'"><img src="../../../assets/icon/delete.png" style="width:70%"></a> </td>'. 
                                             '</tr>'
                                              ;
-                                         }
+                                         
                                      }
-                                       
-                                 ?>
+                                     if(isset($_GET['id'])){
+                                        $id=$_GET['id'];
+                                        $guider->Xoa($id);
+                                    }
+                                    ?>
+                                
                                 </tbody>
                             </table>
                         </div>
