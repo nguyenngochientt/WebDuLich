@@ -85,8 +85,8 @@
                                     <a><i class="glyphicon glyphicon-list-alt" style="margin-right: 12px;"></i> Loại tour
                                         <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="danhmuc.php">Xem tất cả</a></li>
-                                        <li><a href="addCategory.php">Thêm mới</a></li>
+                                        <li><a href="../category/danhmuc.php">Xem tất cả</a></li>
+                                        <li><a href="../category/addCategory.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -101,8 +101,8 @@
                                     <a><i class="glyphicon glyphicon-leaf" style="margin-right: 12px;"></i> Tour <span
                                             class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="tour.php">Xem tất cả</a></li>
-                                        <li><a href="addtour.php">Thêm mới</a></li>
+                                        <li><a href="../tour/tour.php">Xem tất cả</a></li>
+                                        <li><a href="../tour/addtour.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>

@@ -57,7 +57,7 @@
                                                 '<td>'.$row["birthday"].'</td>'.
                                                 '<td>'.$row["address"].'</td>'.
                                                 '<td>'.$row["tel"].'</td>'.  
-                                                '<td> <img src="../../assets/icon/delete.png" style="width: 55%;"> </td>'.  
+                                                '<td> <img src="../../../assets/icon/delete.png" style="width: 55%;"> </td>'.  
                                             '</tr>'
                                              ;
                                          }

@@ -1,4 +1,4 @@
-<?php include_once __DIR__."/layout/header.php" ?>
+<?php include_once __DIR__."/header.php" ?>
 
 <!-- page content -->
 <div class="row">
@@ -40,10 +40,12 @@
                                     <tr>
                                         <th>ID Danh mục</th>
                                         <th>Tên danh mục</th>
+                                        <th style="width:17px"> Xóa</th>
                                     </tr>
                                 </thead>
                                 <tbody> 
                                 <?php
+                                    include "../../../admin/function/category/category.php";
                                      $select="select * from category";
                                      $result=mysqli_query( $connectDB->conn, $select);
                                      if(mysqli_num_rows($result)>0){
@@ -52,10 +54,27 @@
                                              <tr>
                                                 <td>'.$row["id_category"].'</td>'.
                                                 '<td>'.$row["name_category"].'</td>'.
+                                                '<td> <form action="" method="post"><button style="outline:0;border:0;width:34px;background:none" type="submit" name="xoa"><img src="../../../assets/icon/delete.png" style="width:100%"></button> </form></td>'.  
+
                                             '</tr>'
                                              ;
-                                         }
+                                            //  if(!isset($_POST["xoa"]))
+                                            //      return 0;
+                                            // else{
+                                         
+                                            //     $select="select * from tour where id_category='".$row["id_category"]."'";
+                                            //     $result=mysqli_query( $connectDB->conn, $select);
+                                            //     if(mysqli_num_rows($result)>0){
+                                            //         echo "Không thể xóa!";
+                                            //     }
+                                            //     else{
+                                            //         $category=new TXSCategory();
+                                            //         $category->Xoa($row["id_category"]);
+                                            //     }
+                                            //     }
+                                             }
                                      }
+                                   
                                  ?>
                                 </tbody>
                             </table>
@@ -69,4 +88,4 @@
     </div>
 </div>
 <!-- /page content -->
-<?php include_once __DIR__."/layout/footer.php" ?>
+<?php include_once __DIR__."/footer.php" ?>

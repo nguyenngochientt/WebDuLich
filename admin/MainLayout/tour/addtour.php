@@ -23,20 +23,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="control-label col-md-3 col-sm-3 ">Loại tour</label>
-                                    <div class="col-md-9 col-sm-9 ">
-                                        <select class="form-control" name="id_category">
-                                             <?php
-                                              include "../../../admin/function/category/category.php";
-                                               $category=new TXSCategory();
-                                               foreach($category->HienThi() as $key => $value){
-                                                    echo '<option>'.$value->name_category.'</option>';
-                                             }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3 ">Hướng dẫn viên</label>
                                     <div class="col-md-9 col-sm-9 ">
 
@@ -52,24 +38,6 @@
                                         }
                                     }
                                 ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="control-label col-md-3 col-sm-3 ">Vùng niềm</label>
-                                    <div class="col-md-9 col-sm-9 ">
-                                        <select class="form-control" name="id_region">
-                                            <?php
-                                        $select="select * from region";
-                                        $result=mysqli_query( $connectDB->conn, $select);
-                                        if(mysqli_num_rows($result)>0){
-                                            while($row=mysqli_fetch_assoc($result)){
-                                                echo '
-                                                    <option>'.$row["id_region"].'</option>';
-                                                ;
-                                            }
-                                        }
-                                    ?>
                                         </select>
                                     </div>
                                 </div>
@@ -224,10 +192,6 @@
                                if(isset($_POST["tour_guider_id"])){
                                     $Addtour->tour_guide_id=$_POST["tour_guider_id"];
                                }
-                               $id_region="";
-                               if(isset($_POST["id_region"])){
-                                $Addtour->id_region=$_POST["id_region"];
-                               }
                                $place_start="";
                                if(isset($_POST["place_start"])){
                                 $Addtour->place_start=$_POST["place_start"];
@@ -262,15 +226,8 @@
                                }
                                $image=$image_name;
                                $Addtour->img_url=$image;
-                               // if(isset($_POST["image"])){
-                               //     $image=$_POST["image"];
-                               // }
-                               $id_category="";
-                               if(isset($_POST["id_category"])){
-                                $Addtour->id_category=$_POST["id_category"];
-                               }
                                
-                               print_r($Addtour);
+                               
                                $tour->Them($Addtour);
                                //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
                            }

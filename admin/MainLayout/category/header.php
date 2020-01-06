@@ -12,32 +12,33 @@
     <title>Travel Book | </title>
 
     <!-- Bootstrap -->
-    <link href="layout/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="layout/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="layout/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../layout/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="layout/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="../../layout/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- bootstrap-progressbar -->
-    <link href="layout/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="layout/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <link href="../../layout/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
-    <link href="layout/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="../../layout/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
  <!-- Datatables -->
- <link href="layout/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="layout/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="layout/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="layout/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="layout/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+ <link href="../../layout/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="layout/build/css/custom.min.css" rel="stylesheet">
+    <link href="../../layout/build/css/custom.min.css" rel="stylesheet">
     <!-- Dropzone.js -->
-    <link href="layout/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="../../layout/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
     <?php 
-        include '..\model\connectDB.php';
+        include '..\..\..\model\connectDB.php';
         use model\connectDB;
         $connectDB=new connectDB("tctdlich");
         $connectDB->connect();
@@ -84,24 +85,24 @@
                                     <a><i class="glyphicon glyphicon-list-alt" style="margin-right: 12px;"></i> Loại tour
                                         <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="MainLayout/category/danhmuc.php">Xem tất cả</a></li>
-                                        <li><a href="MainLayout/category/addCategory.php">Thêm mới</a></li>
+                                        <li><a href="danhmuc.php">Xem tất cả</a></li>
+                                        <li><a href="addCategory.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="glyphicon glyphicon-certificate" style="margin-right: 12px;"></i> Hướng
                                         dẫn viên <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="MainLayout/guider/tour_guider.php">Xem tất cả</a></li>
-                                        <li><a href="MainLayout/guider/add_tour_guider.php">Thêm mới</a></li>
+                                        <li><a href="../guider/tour_guider.php">Xem tất cả</a></li>
+                                        <li><a href="../guider/add_tour_guider.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="glyphicon glyphicon-leaf" style="margin-right: 12px;"></i> Tour <span
                                             class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="MainLayout/tour/tour.php">Xem tất cả</a></li>
-                                        <li><a href="MainLayout/tour/addtour.php">Thêm mới</a></li>
+                                        <li><a href="../tour/tour.php">Xem tất cả</a></li>
+                                        <li><a href="../tour/addtour.php">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>

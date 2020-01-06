@@ -10,7 +10,7 @@
                     echo "<div class='col-sm-3 item' style='float:left'>
                             <div class='item'>
                                 <div class='tour-col-sm-3'>
-                                <img src='admin/images/".$row['img_url']."'>".
+                                <img src='admin/MainLayout/tour/images/".$row['img_url']."'>".
                                     "<h5>".$row['name_tour']."</h5>".
                                     "<p>Nơi khởi hành:".$row['place_start']."</p>".
                                     "<p>Điêm dừng chân:".$row['place_des']."</p>".

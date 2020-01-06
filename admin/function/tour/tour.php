@@ -32,8 +32,8 @@
         }
         public function Them($tour){
             $tour;
-            $sql="insert into tour(name_tour,tour_guide_id,id_region,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child,id_category)
-                values('".$tour->name_tour."','".$tour->tour_guide_id."','".$tour->id_region."','".$tour->place_start."','".$tour->place_des."','".$tour->date_go."','".$tour->date_back."','".$tour->img_url."','".$tour->num_adult."','".$tour->num_child."','".$tour->price_adults."','".$tour->price_child."','".$tour->id_category."')";
+            $sql="insert into tour(name_tour,tour_guide_id,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child)
+                values('".$tour->name_tour."','".$tour->tour_guide_id."','".$tour->place_start."','".$tour->place_des."','".$tour->date_go."','".$tour->date_back."','".$tour->img_url."','".$tour->num_adult."','".$tour->num_child."','".$tour->price_adults."','".$tour->price_child."')";
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {
@@ -50,8 +50,6 @@
             update from tour
             set tour_guide_id='$tour->tour_guide_id';
             update from tour
-            set id_region='$tour->id_region';
-            update from tour
             set place_start='$tour->place_start';
             update from tour
             set place_des='$tour->place_des';
@@ -59,9 +57,13 @@
             set date_go='$tour->date_go';
             update from tour
             set date_back='$tour->date_back';
-            update from tour
-            set tour_guide_id='$tour->tour_guide_id';
             ";
+            if (mysqli_query($this->connectDB->conn, $sql)) {
+                // echo "New record created successfully";
+            
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+            }
         }
     }
     // $tour=new TXSTour();

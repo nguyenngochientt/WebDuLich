@@ -41,19 +41,24 @@
             }
         }
         public function Them($category){
-        
             $sql="insert into tour(id_category, name_category)
                 values('".$category->id_category."','".$category->name_category."')";
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {
                 // echo "New record created successfully";
-            
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
             }
         }
-        
+        public function Xoa($id){
+            $sql="delete from category where id_category ='".$id."'";
+            if (mysqli_query($this->connectDB->conn, $sql)) {
+                // echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+            }
+        }
     }
     // $tour=new TXSTour();
     // print_r($tour->HienThi()) ;   
