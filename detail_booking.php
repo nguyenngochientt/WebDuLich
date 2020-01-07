@@ -47,14 +47,39 @@
                                 padding: 2%;">
                    <form method="POST">
                        <h1>Đăng kí nhận tour</h1>
-                       <p>Tên <input placeholder="Nhập tên" name="name" style="width:100%"></p>
+                       <p>Tên <input placeholder="Nhập tên" type="text" name="name" style="width:100%"></p>
                        
-                       <p>Số điện thoại  <input placeholder="Nhập số điện thoại" name="sdt" style="width:100%"></p>
+                       <p>Số điện thoại  <input placeholder="Nhập số điện thoại" type="text" name="sdt" style="width:100%"></p>
                       
-                       <p>Email  <input placeholder="Nhập email" name="email" style="width:100%"></p>
-                        <button type="submit">Đăng kí</button>
-
+                       <p>Email  <input placeholder="Nhập email" type="text"  name="email" style="width:100%"></p>
+                        <button type="submit" name="submit">Đăng kí</button>
                    </form>
+                   <?php
+                     include "admin/function/customer/customer.php";
+                     $customer=new TXSCustomer();
+                     $addCus=new Customer();
+                     $name="";
+                     $tel="";
+                     $email="";
+                     $state="0";
+                        if(isset($_POST['submit'])){
+
+                            if(isset($_POST['name'])){
+                                $addCus->name_customer=$_POST['name'];
+                            }
+                            if(isset($_POST['sdt'])){
+                                $addCus->tel=$_POST['sdt'];
+                            }
+                            if(isset($_POST['email'])){
+                                $addCus->email=$_POST['email'];
+                            }
+                            
+                            $customer->Them($addCus);
+
+                        }
+                           
+                        ?>
+                  
                </div>
            </div>
         </div>
