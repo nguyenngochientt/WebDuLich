@@ -1,6 +1,6 @@
 
 # Website đặt tour du lịch
-![alt text](http://localhost:8888/webDL_clone/WebDuLich-BaiTapLon-PTMNM-/assets/images/image_footer/bg_3.jpg)
+![alt text](https://scontent.fdad3-3.fna.fbcdn.net/v/t1.0-9/81706706_171574874078822_4353295653414109184_n.jpg?_nc_cat=108&_nc_ohc=vwin0Wd-qHwAQk1rWqz2hhqYSgH3wVFBcppDjDwK8W00Z3AvIEZ6pMbjA&_nc_ht=scontent.fdad3-3.fna&oh=7b6a31a5b454265f948ae61252f5b478&oe=5E9E6652)
 ## Mô tả:
 - Website đặt tour du lịch là một hệ thống tra cứu và đặt tour du lịch trực tuyến.
 - Website cho phép người sở hữu cập nhật và đăng tải các tour du lịch lên trang web.
