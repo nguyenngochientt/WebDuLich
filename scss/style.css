@@ -3,7 +3,7 @@
 }
 
 .top-bar {
-  background: #bbbbbb;
+  background: #020182;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -17,7 +17,7 @@
   margin-left: 2%;
 }
 .top-bar ul li a {
-  color: #000;
+  color: white;
 }
 .top-bar ul li:first-child {
   margin-left: 1%;
@@ -26,6 +26,10 @@
 
 .nav-menu {
   padding: 0px;
+  background: linear-gradient(90deg, #500000, #ff00008c);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
 }
 
 .seach {
