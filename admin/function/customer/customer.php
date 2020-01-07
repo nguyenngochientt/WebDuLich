@@ -27,12 +27,12 @@
         }
         public function Them($cus){
             $cus;
-            $sql="insert into customer(name_customer,tel,email,state)
-                values('$cus->name_customer','$cus->tel','$cus->email','$cus->state')";
+            $sql="insert into customer(id_customer,name_customer,tel,email,state)
+                values('$cus->id_customer','$cus->name_customer','$cus->tel','$cus->email','$cus->state')";
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                // echo "New record created successfully";
+               return true;
             
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
@@ -41,9 +41,9 @@
         public function Xoa($id){
             $sql="delete from customer where id_customer ='".$id."'";
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                 echo "Xóa thành công";
+                 return true;
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+                return false;
             }
         }
     }

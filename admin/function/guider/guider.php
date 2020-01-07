@@ -33,7 +33,7 @@
         public function Them($guider){
             $guider;
             $sql="insert into tour(id_guider,name_guider,birthday,address,tel,img_url)
-                values('$guider->id_gudier','$guider->name_guider','$guider->birthday','guider->$guider->tel','$guider->img_url')";
+                values('$guider->id_gudier','$guider->name_guider','$guider->birthday','$guider->tel','$guider->img_url')";
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {

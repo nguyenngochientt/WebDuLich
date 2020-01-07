@@ -106,12 +106,12 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a><i class="glyphicon glyphicon-record" style="margin-right: 12px;"></i> Booking
+                                    <a href="../booking/booking.php"><i class="glyphicon glyphicon-record" style="margin-right: 12px;"></i> Booking
                                     </a>
                                 </li>
                                
                                 <li>
-                                    <a><i class="glyphicon glyphicon-user" style="margin-right: 12px;"></i> Customer
+                                    <a href="../customer/customer.php"><i class="glyphicon glyphicon-user" style="margin-right: 12px;"></i> Customer
                                     </a>
                                 </li>
                             

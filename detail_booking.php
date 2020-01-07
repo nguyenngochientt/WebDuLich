@@ -52,18 +52,38 @@
                        <p>Số điện thoại  <input placeholder="Nhập số điện thoại" type="text" name="sdt" style="width:100%"></p>
                       
                        <p>Email  <input placeholder="Nhập email" type="text"  name="email" style="width:100%"></p>
+                       
+                        <p>Số vé người lớn  <input placeholder="Nhập số vé người lớn" type="text" name="num_adults" style="width:100%"></p>
+                        <p>Số vé trẻ em  <input placeholder="Nhập số vé trẻ em" type="text" name="num_child" style="width:100%"></p>
                         <button type="submit" name="submit">Đăng kí</button>
-                   </form>
+                    </form>
                    <?php
                      include "admin/function/customer/customer.php";
+                     include "admin/function/booking/booking.php";
                      $customer=new TXSCustomer();
+                     $booking=new TXSBooking();
+                     $addBooking=new Booking();
                      $addCus=new Customer();
+                     $addCus->id_customer=rand();
+                     $num_adults="";
+                     $num_child="";
                      $name="";
                      $tel="";
                      $email="";
                      $state="0";
+                     $id_tour="";
+                       
+                        if(isset($_GET["id"])){
+                            $id_tour=$_GET["id"];
+                            $addBooking->id_tour=$id_tour;
+                        }   
                         if(isset($_POST['submit'])){
-
+                            if(isset($_POST['num_adults'])){
+                                $addBooking->num_adults=$_POST['num_adults'];
+                            }
+                            if(isset($_POST['num_child'])){
+                                $addBooking->num_child=$_POST['num_child'];
+                            }
                             if(isset($_POST['name'])){
                                 $addCus->name_customer=$_POST['name'];
                             }
@@ -73,11 +93,11 @@
                             if(isset($_POST['email'])){
                                 $addCus->email=$_POST['email'];
                             }
-                            
-                            $customer->Them($addCus);
-
-                        }
-                           
+                            if( $customer->Them($addCus)){
+                                $addBooking->id_customer=$addCus->id_customer;
+                                $booking->Them($addBooking);
+                            }
+                        }  
                         ?>
                   
                </div>
