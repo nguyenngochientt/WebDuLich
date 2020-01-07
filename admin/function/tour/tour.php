@@ -33,41 +33,48 @@
         public function Them($tour){
             $tour;
             $sql="insert into tour(name_tour,tour_guide_id,place_start,place_des,date_go,date_back,img_url,num_adults,num_child,price_adult,price_child)
-                values('".$tour->name_tour."','".$tour->tour_guide_id."','".$tour->place_start."','".$tour->place_des."','".$tour->date_go."','".$tour->date_back."','".$tour->img_url."','".$tour->num_adult."','".$tour->num_child."','".$tour->price_adults."','".$tour->price_child."')";
+                values('".$tour->name_tour."','".$tour->tour_guide_id."','".$tour->place_start."','".$tour->place_des."','".$tour->date_go."','".$tour->date_back."','".$tour->img_url."','".$tour->num_adult."','".$tour->num_child."','".$tour->price_adult."','".$tour->price_child."')";
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                // echo "New record created successfully";
+                return true;
             
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+               return false;
             }
         }
         public function Sua($tour){
             $sql="
             update  tour
-            set name_tour='$tour->name_tour',
-            tour_guide_id='$tour->tour_guide_id',
-             place_start='$tour->place_start',
-             place_des='$tour->place_des',
-             date_go='$tour->date_go',
-             date_back='$tour->date_back'
-            where id_tour='$tour->id_tour'
+            set 
+                name_tour='$tour->name_tour',
+                tour_guide_id='$tour->tour_guide_id',
+                place_start='$tour->place_start',
+                place_des='$tour->place_des',
+                date_go='$tour->date_go',
+                date_back='$tour->date_back',
+                num_adults=$tour->num_adult,
+                num_child=$tour->num_child,
+                price_adult=$tour->price_adult,
+                price_child=$tour->price_child
+              
+             where 
+                id_tour=$tour->id_tour
           
             ";
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                // echo "New record created successfully";
+               return true;
             
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+              return false;
             }
         }
         public function Xoa($id){
-            $sql="delete from tour where id_tour ='".$id."'";
+            $sql="delete from tour where id_tour =".$id."";
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                 echo "Xóa thành công";
+                 return true;
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+                return false;
             }
         }
     }

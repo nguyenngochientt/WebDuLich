@@ -40,6 +40,7 @@
                                         <th>Tên tour du lịch</th>
                                         <th>Số vé người lớn</th>
                                         <th>Số vé trẻ em</th>
+                                        <th>Tổng tiền thanh toán</th>
                                         <th>Thanh toán</th>
                                         <th style="width:17px"> Xóa</th>
 
@@ -50,6 +51,7 @@
                                     include "../../../admin/function/booking/booking.php";
                                     $booking=new TXSBooking();
                                     foreach($booking->HienThi() as $key => $value){
+                                            $tongtien=$value->num_child*$value->price_child+$value->num_adults*$value->price_adult;
                                              echo '
                                              <tr >
                                                 <td>'.$value->id_booking.'</td>'.
@@ -57,6 +59,7 @@
                                                 '<td>'.$value->name_tour.'</td>'.
                                                 '<td>'.$value->num_adults.'</td>'.
                                                 '<td>'.$value->num_child.'</td>'.
+                                                '<td>'.$tongtien.'</td>'.
                                                 '<td>'.'Chưa'.'</td>'.
                                                 '<td> <a href="booking.php?id='.$value->id_booking.'"><img src="../../../assets/icon/delete.png" style="width:70%"></a> </td>'. 
                                             '</tr>'
@@ -72,7 +75,6 @@
                                         }
                                     }
                                     ?>
-                                
                                 </tbody>
                             </table>
                         </div>

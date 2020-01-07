@@ -101,8 +101,8 @@
                                     <a><i class="glyphicon glyphicon-edit" style="margin-right: 12px;"></i> Bài viết
                                         <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="index.html">Xem tất cả</a></li>
-                                        <li><a href="index2.html">Thêm mới</a></li>
+                                        <li><a href="#">Xem tất cả</a></li>
+                                        <li><a href="#">Thêm mới</a></li>
                                     </ul>
                                 </li>
                                 <li>

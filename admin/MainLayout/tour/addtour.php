@@ -68,7 +68,7 @@
                                 <div class="form-group row ">
                                     <label class="control-label col-md-3 col-sm-3 ">Giá vé người lớn</label>
                                     <div class="col-md-9 col-sm-9 ">
-                                        <input type="text" class="form-control" name="price_adutls" placeholder="Giá vé người lớn...">
+                                        <input type="text" class="form-control" name="price_adult" placeholder="Giá vé người lớn...">
                                     </div>
                                 </div>
                                 <div class="form-group row ">
@@ -212,9 +212,9 @@
                                if(isset($_POST["date_back"])){
                                 $Addtour->date_back=$_POST["date_back"];
                                }
-                               $price_adutls="";
-                               if(isset($_POST["price_adutls"])){
-                                $Addtour->price_adutls=$_POST["price_adutls"];
+                               $price_adult="";
+                               if(isset($_POST["price_adult"])){
+                                $Addtour->price_adult=$_POST["price_adult"];
                                }
                                $price_child="";
                                if(isset($_POST["price_child"])){
@@ -238,8 +238,13 @@
                                 $Addtour->id_category=$_POST["id_category"];
                                }
                                
-                               print_r($Addtour);
-                               $tour->Them($Addtour);
+                               if($tour->Them($Addtour)){
+                                echo '<script type="text/javascript"> alert("Sửa thành công")</script>';
+                                }
+                                else{
+                                    echo '<script type="text/javascript"> alert("Sửa không thành công")</script>';
+                                }
+                               
                                //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
                            }
                          

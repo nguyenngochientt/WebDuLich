@@ -63,7 +63,14 @@
                                      }
                                      if(isset($_GET['id'])){
                                         $id=$_GET['id'];
-                                        $guider->Xoa($id);
+                                      
+                                        if(  $guider->Xoa($id)){
+                                            echo '<script type="text/javascript"> alert("Xóa thành công")</script>';
+                                        }
+                                        else{
+                                            echo '<script type="text/javascript"> alert("Không thể xóa")</script>';
+                                        }
+                                        
                                     }
                                     ?>
                                 

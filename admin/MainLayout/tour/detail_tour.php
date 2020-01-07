@@ -53,7 +53,7 @@
                                                     '<p>'.'Tên tour du lịch: <input style="width:100%" type=text name="name_tour" value="'.$row["name_tour"].'"</p>'.
                                                     '<p>'.'Hướng dẫn viên:  <input style="width:100%" type=text name="tour_guider_id" value="'.$row["tour_guide_id"].'"</p>'.
                                                     '<p>'.'Nơi khởi hành: <input style="width:100%" type=text name="place_start" value="'.$row["place_start"].'"</p>'.
-                                                    '<p>'.'Ngày khởi hành:  <input style="width:100%" type=text name="date_go" value="'.$row["date_go"].'"</p>'.
+                                                    '<p>'.'Ngày khởi hành:  <input style="width:100%" type=text name="date_start" value="'.$row["date_go"].'"</p>'.
                                                     '<p>'.'Điểm dừng chân: <input style="width:100%" type=text name="place_des" value="'.$row["place_des"].'"</p>'.
                                                     '</div>
                                                 <div class="col-sm-6">'.
@@ -78,7 +78,14 @@
                                 }
                                      
                                  ?>
-                                
+                                <!-- <div class="form-group row ">
+                                    <label class="control-label col-md-3 col-sm-3 ">Đổi ảnh</label>
+                                    <div class="col-md-9 col-sm-9 ">
+                                        <input type="file" name="image">
+                                       
+                        
+                                    </div>
+                                </div> -->
                                 <div class="form-group row ">
                                     <label class="control-label col-md-3 col-sm-3 ">Submit</label>
                                     <div class="col-md-9 col-sm-9 ">
@@ -91,11 +98,11 @@
                          //   include "../admin/function/tour/tour-server.php";
                             include "../../../admin/function/tour/tour.php";
                            if(isset($_POST['Submit'])){
-                          
+                     
                                $Addtour=new Tour();
                            
                                $tour=new TXSTour();
-                               $id_tour="";
+                               $id_tour=0;
                                if(isset($_POST["id_tour"])){
                                 $Addtour->id_tour=$_POST["id_tour"];
                                }
@@ -127,9 +134,9 @@
                                if(isset($_POST["date_back"])){
                                 $Addtour->date_back=$_POST["date_back"];
                                }
-                               $price_adutls="";
-                               if(isset($_POST["price_adutls"])){
-                                $Addtour->price_adutls=$_POST["price_adutls"];
+                               $price_adult="";
+                               if(isset($_POST["price_adult"])){
+                                $Addtour->price_adult=$_POST["price_adult"];
                                }
                                $price_child="";
                                if(isset($_POST["price_child"])){
@@ -151,10 +158,13 @@
                                if(isset($_POST["id_category"])){
                                 $Addtour->id_category=$_POST["id_category"];
                                }
-                               
-                               print_r($Addtour);
-                               $tour->Sua($Addtour);
-                               //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
+                           
+                               if( $tour->Sua($Addtour)){
+                                echo '<script type="text/javascript"> alert("Sửa thành công")</script>';
+                                }
+                                else{
+                                    echo '<script type="text/javascript"> alert("Sửa không thành công")</script>';
+                                }
                            }
                          
                         ?>

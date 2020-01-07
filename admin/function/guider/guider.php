@@ -37,10 +37,10 @@
             //$result=mysqli_query( $connectDB->conn, $select);
 
             if (mysqli_query($this->connectDB->conn, $sql)) {
-                // echo "New record created successfully";
+                return true;
             
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($this->connectDB->conn);
+               return false;
             }
         }
         public function Sua($guider){
