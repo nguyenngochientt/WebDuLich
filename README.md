@@ -28,8 +28,8 @@ Bước3: Vào trình duyệt gõ đường dẫn vào localhost đến thư m�
 ## Nội dung bài toán:
 - Hiện tại hệ thống đã hoàn thành giao diện 70%.
 - Đã có cơ sở dữ liệu, kết nối csdl với website, đã thêm và hiển thị được các tour vào trong trang web.
-## Hướng phát triên:
-###Bổ sung thêm chức năng: 
+## Hướng phát triên
+Bổ sung thêm chức năng: 
 - Các thông tin liên quan đến các mức phí và phụ phí..
 - Liên kết tới các khách sạn
 - lựa chọn số vé khi đặt tour.
