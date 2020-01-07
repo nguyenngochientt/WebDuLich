@@ -55,7 +55,7 @@
                                      if(isset($_GET['id'])){
                                         $id=$_GET['id'];
                                       
-                                        if(  $guider->Xoa($id)){
+                                        if($guider->Xoa($id)){
                                             echo '<script type="text/javascript"> alert("Xóa thành công")</script>';
                                         }
                                         else{
