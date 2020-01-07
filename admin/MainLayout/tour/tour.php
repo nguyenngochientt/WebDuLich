@@ -58,8 +58,13 @@
                                      }
                                     if(isset($_GET['id'])){
                                         $id=$_GET['id'];
-                                        $tour->Xoa($id);
                                        
+                                        if( $tour->Xoa($id)){
+                                            echo '<script type="text/javascript"> alert("Xóa thành công")</script>';
+                                            }
+                                            else{
+                                                echo '<script type="text/javascript"> alert("Xóa không thành công")</script>';
+                                            }
                                     }
                                     ?>
                                 </tbody>    

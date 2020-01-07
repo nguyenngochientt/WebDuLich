@@ -239,10 +239,10 @@
                                }
                                
                                if($tour->Them($Addtour)){
-                                echo '<script type="text/javascript"> alert("Sửa thành công")</script>';
+                                echo '<script type="text/javascript"> alert("Thêm thành công")</script>';
                                 }
                                 else{
-                                    echo '<script type="text/javascript"> alert("Sửa không thành công")</script>';
+                                    echo '<script type="text/javascript"> alert("Thêm không thành công")</script>';
                                 }
                                
                                //echo '<a  href = "foodlist.php" class="btn btn-primary">Quay lại</a>';
